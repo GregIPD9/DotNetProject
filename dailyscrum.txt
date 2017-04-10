@@ -13,3 +13,17 @@ WILL DO IN THE NEXT 24 HOURS
 WHERE I NEED HELP IS...
 1. I need help finding an example how B is used to....
 2. ...
+
+
+--- April 10 Gregory
+DID SINCE LAST SCRUM:
+1. setup Trello
+2. setup GitHub
+3. setup SourcTree repository in class
+4. added tasks to Planned in Trello 
+WILL DO IN THE NEXT 24 HOURS
+1. setup SourcTree repository at home
+2. breakdown tasks Planned in Trello 
+WHERE I NEED HELP IS...
+1. I need help finding an example how to Connect to Azure with team member
+2. ...
