@@ -17,11 +17,11 @@ namespace InventoryApp
     /// <summary>
     /// Interaction logic for AdministratorView.xaml
     /// </summary>
-    public partial class AdministratorView : Window
+    public partial class ManagerView : Window
     {
         internal static object xaml;
 
-        public AdministratorView()
+        public ManagerView()
         {
             InitializeComponent();
         }

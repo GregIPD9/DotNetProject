@@ -1,0 +1,24 @@
+﻿<Window x:Class="MainSIMS.ModifyUser"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MainSIMS"
+        mc:Ignorable="d"
+        Title="ModifyUser" Height="300" Width="300">
+    <Grid Background="Azure">
+        <Label x:Name="label" Content="User:" HorizontalAlignment="Left" Margin="32,57,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label_Copy" Content="Password:" HorizontalAlignment="Left" Margin="32,98,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label_Copy1" Content="Privilege:" HorizontalAlignment="Left" Margin="32,140,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="119,60,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="textBox_Copy" HorizontalAlignment="Left" Height="23" Margin="119,101,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="119,144,0,0" VerticalAlignment="Top" Width="120">
+            <ComboBoxItem Content="Administrator" HorizontalAlignment="Left" Width="118"/>
+            <ComboBoxItem Content="Manager" HorizontalAlignment="Left" Width="118"/>
+            <ComboBoxItem Content="Employee" HorizontalAlignment="Left" Width="118"/>
+            <ComboBoxItem Content="Guest" HorizontalAlignment="Left" Width="118"/>
+        </ComboBox>
+        <Button x:Name="button" Content="Modify User" HorizontalAlignment="Left" Margin="106,201,0,0" VerticalAlignment="Top" Width="75"/>
+
+    </Grid>
+</Window>
