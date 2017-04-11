@@ -29,6 +29,6 @@ namespace InventoryApp
         {
             ManagerView managerView = new ManagerView();
             managerView.Show();
-        }
+        }       
     }
 }
