@@ -1,18 +1,42 @@
 InventoryApp 
 Teammembers: Andrei Sinkevich and Gregory Torakis
 
+--- April 11 Andrei
+DID SINCE LAST SCRUM:
+1. setup SourcTree repository at home
+2. modify and added different UI views (Admin, Manager)
+WILL DO IN THE NEXT 24 HOURS
+1. add different UI views (Employee, Supplier)
+2. Setup Azure connection 
+WHERE I NEED HELP IS...
+1. Setup Login Access UI to Azure database  
+2. Display DB in Gridview
 
+--- April 11 Gregory
+DID SINCE LAST SCRUM:
+1. setup SourcTree repository at home
+2. redo proposal
+WILL DO IN THE NEXT 24 HOURS
+1. Setup Azure connection
+2. Finalize db tables
+WHERE I NEED HELP IS...
+1. Setup Login Access UI to Azure database  
+2.
+
+===========================================
 
 --- April 10 Andrei
 DID SINCE LAST SCRUM:
-1. First SCRUM 
-2. .....
+1. setup Trello
+2. setup GitHub
+3. setup SourcTree repository in class
+4. added tasks to Planned in Trello 
 WILL DO IN THE NEXT 24 HOURS
-1. Finish Z then move on to research and implement B
-2. ...
+1. setup SourcTree repository at home
+2. breakdown tasks Planned in Trello 
 WHERE I NEED HELP IS...
-1. I need help finding an example how B is used to....
-2. ...
+1. I need help finding an example how to Connect to Azure with team member
+
 
 
 --- April 10 Gregory
@@ -26,4 +50,4 @@ WILL DO IN THE NEXT 24 HOURS
 2. breakdown tasks Planned in Trello 
 WHERE I NEED HELP IS...
 1. I need help finding an example how to Connect to Azure with team member
-2. ...
+
