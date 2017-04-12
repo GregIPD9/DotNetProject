@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Data.SqlClient;
+using MainSIMS;
 
 namespace InventoryApp
 {
@@ -28,32 +29,41 @@ namespace InventoryApp
 
         private void buttonLogIn_Click(object sender, RoutedEventArgs e)
         {
-            SqlConnection cn = new SqlConnection("Server=tcp:andrei-greg.database.windows.net,1433;Initial Catalog=InventoryDB;Persist Security Info=False;User ID={DBadmin};Password={JohnIsGreat2000};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
-            cn.Open();
-            SqlCommand cmd = new SqlCommand("SELECT * FROM dbo.users WHERE user = '"+ tbUser.Text + "' AND password = '"+tbPassword.Text + "'", cn);
-            SqlDataReader dr;
-            dr = cmd.ExecuteReader();
-            int count = 0;
-            while (dr.Read())
+            
+            if (string.IsNullOrEmpty(tbUser.Text))
             {
-                count += 1;
-            }
-            if (count == 1)
-            {
-                MessageBox.Show("ok");
+                MessageBox.Show("Please enter your username.", "Message", MessageBoxButton.OK, MessageBoxImage.Warning);
+                tbUser.Focus();
+                return;
+                /*MessageBox.Show("ok");
                 MainSIMS.AdminView adminView = new MainSIMS.AdminView();
-                adminView.Show();
+                adminView.Show();*/
             }
-            else if (count > 0)
+            try
             {
-                MessageBox.Show("Duplicate username and password");
+               using (TestEntities test = new TestEntities())
+                {
+                    var query = from o in test.users
+                                where o.username == tbUser.Text && o.password == tbPassword.Text
+                                select o;
+                    if (query.SingleOrDefault() != null)
+                    { 
+                        MessageBox.Show("You have been successfully logged in.", "Message", MessageBoxButton.OK, MessageBoxImage.Information);
+                        //add code process here
+                        AdminView admin = new AdminView();
+                        admin.Show();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Your username or password is incorrect.", "Message", MessageBoxButton.OK, MessageBoxImage.Information);
+                    }
+                }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("username or password not correct");
+                MessageBox.Show(ex.Message, "Message", MessageBoxButton.OK, MessageBoxImage.Error);
+
             }
-            tbUser.Clear();
-            tbPassword.Clear();
 
 
 
