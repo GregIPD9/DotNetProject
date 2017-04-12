@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Data.SqlClient;
+using MainSIMS;
 
 namespace InventoryApp
 {
@@ -27,8 +29,46 @@ namespace InventoryApp
 
         private void buttonLogIn_Click(object sender, RoutedEventArgs e)
         {
-            ManagerView managerView = new ManagerView();
-            managerView.Show();
+            
+            if (string.IsNullOrEmpty(tbUser.Text))
+            {
+                MessageBox.Show("Please enter your username.", "Message", MessageBoxButton.OK, MessageBoxImage.Warning);
+                tbUser.Focus();
+                return;
+                /*MessageBox.Show("ok");
+                MainSIMS.AdminView adminView = new MainSIMS.AdminView();
+                adminView.Show();*/
+            }
+            try
+            {
+               using (TestEntities test = new TestEntities())
+                {
+                    var query = from o in test.users
+                                where o.username == tbUser.Text && o.password == tbPassword.Text
+                                select o;
+                    if (query.SingleOrDefault() != null)
+                    { 
+                        MessageBox.Show("You have been successfully logged in.", "Message", MessageBoxButton.OK, MessageBoxImage.Information);
+                        //add code process here
+                        AdminView admin = new AdminView();
+                        admin.Show();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Your username or password is incorrect.", "Message", MessageBoxButton.OK, MessageBoxImage.Information);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Message", MessageBoxButton.OK, MessageBoxImage.Error);
+
+            }
+
+
+
+            // ManagerView managerView = new ManagerView();
+            //  managerView.Show();
         }       
     }
 }
