@@ -12,10 +12,11 @@ namespace MainSIMS
     using System;
     using System.Collections.Generic;
     
-    public partial class user
+    public partial class User
     {
-        public int Id { get; set; }
-        public string username { get; set; }
-        public string password { get; set; }
+        public int UserId { get; set; }
+        public string Username { get; set; }
+        public string Password { get; set; }
+        public string Role { get; set; }
     }
 }

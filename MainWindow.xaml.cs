@@ -35,24 +35,21 @@ namespace InventoryApp
                 MessageBox.Show("Please enter your username.", "Message", MessageBoxButton.OK, MessageBoxImage.Warning);
                 tbUser.Focus();
                 return;
-                /*MessageBox.Show("ok");
-                MainSIMS.AdminView adminView = new MainSIMS.AdminView();
-                adminView.Show();*/
             }
             try
             {
-               using (TestEntities test = new TestEntities())
+               using (Test2Entities test = new Test2Entities())
                 {
-                    var query = from o in test.users
-                                where o.username == tbUser.Text && o.password == tbPassword.Text                           
+                    var query = from o in test.Users
+                                where o.Username == tbUser.Text && o.Password == tbPassword.Text && o.Role == ComboBoxRole.Text                           
                                 select o;
                   
 
                     if (query.SingleOrDefault() != null)
                     {
-                        switch (tbUser.Text)
+                        switch (ComboBoxRole.Text)
                         {
-                            case "Administrator":
+                            case "Admin":
                                AdminView admin = new AdminView();
                                admin.Show();
                                break;

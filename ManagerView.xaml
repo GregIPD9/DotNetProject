@@ -9,23 +9,23 @@
     <Viewbox VerticalAlignment="Top" Stretch="Uniform">
         <Grid Background="Azure" Margin="0,0,0,0">
 
-            <Button x:Name="button" Content="Load " HorizontalAlignment="Left" Margin="10,14,0,0" VerticalAlignment="Top" Width="75"/>
+            <Button x:Name="button" Content="Load " Click="buttonLoad_Click" HorizontalAlignment="Left" Margin="10,14,0,0" VerticalAlignment="Top" Width="75"/>
             <Button x:Name="button1" Content="Print" HorizontalAlignment="Left" Margin="103,14,0,0" VerticalAlignment="Top" Width="75"/>
             <Button x:Name="button2" Content="Edit" HorizontalAlignment="Left" Margin="194,14,0,0" VerticalAlignment="Top" Width="75"/>
             <Button x:Name="button3" Content="Add " HorizontalAlignment="Left" Margin="288,14,0,0" VerticalAlignment="Top" Width="75"/>
             <Button x:Name="button4" Content="Order " HorizontalAlignment="Left" Margin="377,14,0,0" VerticalAlignment="Top" Width="75"/>
             <Button x:Name="button5" Content="Update" HorizontalAlignment="Left" Margin="467,14,0,0" VerticalAlignment="Top" Width="75"/>
-            <ListView Name="lvUsers" Margin="0,80,10,38" >
+            <ListView Name="lvProductList" Margin="0,80,10,38" >
                 <ListView.View>
                     <GridView>
-                        <GridViewColumn Header="ID" Width="30" DisplayMemberBinding="{Binding Id}" />
+                        <GridViewColumn Header="ID" Width="30" DisplayMemberBinding="{Binding ProductId}" />
                         <GridViewColumn Header="SCU" Width="80" DisplayMemberBinding="{Binding Scu}" />
-                        <GridViewColumn Header="Name" Width="100" DisplayMemberBinding="{Binding Name}" />
-                        <GridViewColumn Header="Price" Width="60" DisplayMemberBinding="{Binding Name}" />
+                        <GridViewColumn Header="Name" Width="100" DisplayMemberBinding="{Binding ProductName}" />
+                        <GridViewColumn Header="Price" Width="60" DisplayMemberBinding="{Binding Price}" />
                         <GridViewColumn Header="Quantity" Width="60" DisplayMemberBinding="{Binding Quantity}" />
                         <GridViewColumn Header="Location" Width="60" DisplayMemberBinding="{Binding Location}" />
                         <GridViewColumn Header="Category" Width="80" DisplayMemberBinding="{Binding Category}" />
-                        <GridViewColumn Header="Supplier" Width="90" DisplayMemberBinding="{Binding Supplier}" />
+                        <GridViewColumn Header="Supplier" Width="90" DisplayMemberBinding="{Binding SupplierName}" />
                     </GridView>
                 </ListView.View>
             </ListView>
