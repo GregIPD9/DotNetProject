@@ -6,21 +6,23 @@
         xmlns:local="clr-namespace:MainSIMS"
         mc:Ignorable="d"
         Title="AdminView" Height="500" Width="573.405">
-    <Grid Background="Azure" Margin="0,0,0,0">
-        <ListView Name="lvUsers" Margin="147,23,151,98" >
-            <ListView.View>
-                <GridView>
+    <Viewbox VerticalAlignment="Top" Stretch="Uniform">
+        <Grid Background="Azure" Margin="0,0,0,0">
+            <ListView Name="lvUsers" Margin="147,23,151,98" >
+                <ListView.View>
+                    <GridView>
 
-                    <GridViewColumn Header="User" Width="80" DisplayMemberBinding="{Binding User}" />
-                    <GridViewColumn Header="Password" Width="80" DisplayMemberBinding="{Binding Password}" />
-                    <GridViewColumn Header="Privilegy" Width="80" DisplayMemberBinding="{Binding Privilegy}" />
-                </GridView>
-            </ListView.View>
-        </ListView>
-        <Button x:Name="button2" Content="Modify User" HorizontalAlignment="Left" Margin="29,102,0,0" VerticalAlignment="Top" Width="94"/>
-        <Button x:Name="button5" Content="Delete User" HorizontalAlignment="Left" Margin="29,146,0,0" VerticalAlignment="Top" Width="94"/>
-        <Image x:Name="image" Source="Images/db.jpeg" Opacity="0.1" HorizontalAlignment="Left" Height="370" VerticalAlignment="Top" Width="538" Margin="10,62,0,0"/>
-        <Button x:Name="button6" Content="Add User" HorizontalAlignment="Left" Margin="29,62,0,0" VerticalAlignment="Top" Width="94"/>
+                        <GridViewColumn Header="User" Width="80" DisplayMemberBinding="{Binding User}" />
+                        <GridViewColumn Header="Password" Width="80" DisplayMemberBinding="{Binding Password}" />
+                        <GridViewColumn Header="Privilegy" Width="80" DisplayMemberBinding="{Binding Privilegy}" />
+                    </GridView>
+                </ListView.View>
+            </ListView>
+            <Button x:Name="button2" Content="Modify User" HorizontalAlignment="Left" Margin="29,102,0,0" VerticalAlignment="Top" Width="94"/>
+            <Button x:Name="button5" Content="Delete User" HorizontalAlignment="Left" Margin="29,146,0,0" VerticalAlignment="Top" Width="94"/>
+            <Image x:Name="image" Source="Images/db.jpeg" Opacity="0.1" HorizontalAlignment="Left" Height="370" VerticalAlignment="Top" Width="538" Margin="10,62,0,0"/>
+            <Button x:Name="button6" Content="Add User" HorizontalAlignment="Left" Margin="29,62,0,0" VerticalAlignment="Top" Width="94"/>
 
-    </Grid>
+        </Grid>
+    </Viewbox>
 </Window>

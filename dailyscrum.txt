@@ -1,6 +1,29 @@
 InventoryApp 
 Teammembers: Andrei Sinkevich and Gregory Torakis
 
+--- April 12 Andrei
+DID SINCE LAST SCRUM:
+1. Setup Azure connection in APP
+2. Added different UI views (Admin, Manager)
+3. Login menu with verification
+WILL DO IN THE NEXT 24 HOURS
+1. Display user database in UI Admin gridview
+2. Connect each user to user UI
+WHERE I NEED HELP IS...
+1.  AdminView data to database 
+
+--- April 12 Gregory
+DID SINCE LAST SCRUM:
+1. Setup Database in Azure
+2. Added tables to db
+WILL DO IN THE NEXT 24 HOURS
+1. Setup Azure connection to Database at home
+2. Finalize db tables
+WHERE I NEED HELP IS...
+1. IP firewall Azure database  
+
+============================================
+
 --- April 11 Andrei
 DID SINCE LAST SCRUM:
 1. setup SourcTree repository at home
