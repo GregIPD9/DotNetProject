@@ -44,14 +44,32 @@ namespace InventoryApp
                using (TestEntities test = new TestEntities())
                 {
                     var query = from o in test.users
-                                where o.username == tbUser.Text && o.password == tbPassword.Text
+                                where o.username == tbUser.Text && o.password == tbPassword.Text                           
                                 select o;
+                  
+
                     if (query.SingleOrDefault() != null)
-                    { 
-                        MessageBox.Show("You have been successfully logged in.", "Message", MessageBoxButton.OK, MessageBoxImage.Information);
-                        //add code process here
-                        AdminView admin = new AdminView();
-                        admin.Show();
+                    {
+                        switch (tbUser.Text)
+                        {
+                            case "Administrator":
+                               AdminView admin = new AdminView();
+                               admin.Show();
+                               break;
+                            case "Manager":
+                               ManagerView manager = new ManagerView();
+                               manager.Show();
+                               break;
+                            case "Employee":
+                               EmployeeView empl = new EmployeeView();
+                               empl.Show();
+                               break;
+                           /*   case "Supplier":
+                               SupplierView supplier = new SupplierView();
+                               supplier.Show(); */
+                        }
+                 // Just for testing purpose, I'll keep this message here for now
+                        MessageBox.Show("You have been successfully logged in.", "Message", MessageBoxButton.OK, MessageBoxImage.Information);  
                     }
                     else
                     {
@@ -64,11 +82,6 @@ namespace InventoryApp
                 MessageBox.Show(ex.Message, "Message", MessageBoxButton.OK, MessageBoxImage.Error);
 
             }
-
-
-
-            // ManagerView managerView = new ManagerView();
-            //  managerView.Show();
         }       
     }
 }
