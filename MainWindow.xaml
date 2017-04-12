@@ -11,17 +11,12 @@
        
         <Image x:Name="image1" Source="Images\db1.png" HorizontalAlignment="Left" Height="234" Margin="344,226,0,0" VerticalAlignment="Top" Width="273"/>
         <Image x:Name="image" Source="Images\brainsql.png" HorizontalAlignment="Left" Height="160" Margin="10,10,0,0" VerticalAlignment="Top" Width="148"/>
-        <PasswordBox x:Name="passwordBox" Background="BlanchedAlmond" HorizontalAlignment="Left" Margin="163,226,0,0" VerticalAlignment="Top" Height="24" Width="136"/>
+            <TextBox x:Name="tbUser" Background="BlanchedAlmond" HorizontalAlignment="Left" Margin="163,175,0,0" VerticalAlignment="Top" Width="136" Height="24"/>
+            <TextBox x:Name="tbPassword" Background="BlanchedAlmond" HorizontalAlignment="Left" Margin="163,226,0,0" VerticalAlignment="Top" Height="24" Width="136"/>
         <Label x:Name="label" Content="Password:" HorizontalAlignment="Left" Margin="90,226,0,0" VerticalAlignment="Top" Height="42" Width="68"/>
         <Label x:Name="label1" Content="User:" HorizontalAlignment="Left" Margin="90,175,0,0" VerticalAlignment="Top" Height="24" Width="68"/>
-        <ComboBox x:Name="comboBox" Background="BlanchedAlmond" HorizontalAlignment="Left" Margin="163,175,0,0" VerticalAlignment="Top" Width="136" Height="24">
-            <ComboBoxItem Content="Administrator" Background="Azure" HorizontalAlignment="Left" Width="133"/>
-            <ComboBoxItem Content="Manager" Background="Azure" HorizontalAlignment="Left" Width="133"/>
-            <ComboBoxItem Content="Employee" Background="Azure" HorizontalAlignment="Left" Width="133"/>
-            <ComboBoxItem Content="Guest" Background="Azure" HorizontalAlignment="Left" Width="133"/>
-        </ComboBox>
-        <CheckBox x:Name="checkBox" Content="Show Password" HorizontalAlignment="Left" Margin="163,255,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="button" Background="BlanchedAlmond"  Content="Log in" HorizontalAlignment="Left" Margin="163,296,0,0" VerticalAlignment="Top" Width="136" Height="29" Click="buttonLogIn_Click"/>
+            <CheckBox x:Name="checkBox" Content="Show Password" HorizontalAlignment="Left" Margin="163,255,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="buttonLogIn" Background="BlanchedAlmond"  Content="Log in" HorizontalAlignment="Left" Margin="163,296,0,0" VerticalAlignment="Top" Width="136" Height="29" Click="buttonLogIn_Click"/>
         <Image x:Name="image2" Source="Images\welcome1.png" HorizontalAlignment="Left" Height="63" Margin="344,10,-136,0" VerticalAlignment="Top" Width="409"/>
         <Image x:Name="image3" Source="Images\inventory1.png" HorizontalAlignment="Left" Height="29" Margin="192,80,0,0" VerticalAlignment="Top" Width="151"/>
         <Image x:Name="image4" Source="Images\management1.png" HorizontalAlignment="Left" Height="31" Margin="311,105,0,0" VerticalAlignment="Top" Width="279" RenderTransformOrigin="0.5,0.5">
