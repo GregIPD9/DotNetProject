@@ -1,6 +1,28 @@
 InventoryApp 
 Teammembers: Andrei Sinkevich and Gregory Torakis
 
+--- April 13 Andrei
+DID SINCE LAST SCRUM:
+1. Make all windows resizeable
+2. Display user database in UI Admin gridview 
+WILL DO IN THE NEXT 24 HOURS
+1. Work on AdminView (to display all and add new user)
+WHERE I NEED HELP IS...
+1. ok
+
+--- April 13 Gregory
+DID SINCE LAST SCRUM:
+1. Setup Azure connection to Database at home
+2. Finalize db tables
+3. Fill tables with data
+WILL DO IN THE NEXT 24 HOURS
+1. Make SupplierView UI
+2. Add Sign Out Button to all table
+WHERE I NEED HELP IS...
+1. Printing Reports/Charts
+
+============================================
+
 --- April 12 Andrei
 DID SINCE LAST SCRUM:
 1. Setup Azure connection in APP
