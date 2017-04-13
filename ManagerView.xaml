@@ -6,7 +6,9 @@
         xmlns:local="clr-namespace:MainSIMS"
         mc:Ignorable="d"
         Title="ManagerView" Height="500" Width="573.405">
+        
     <Viewbox VerticalAlignment="Top" Stretch="Uniform">
+        
         <Grid Background="Azure" Margin="0,0,0,0">
 
             <Button x:Name="button" Content="Load " Click="buttonLoad_Click" HorizontalAlignment="Left" Margin="10,14,0,0" VerticalAlignment="Top" Width="75"/>
@@ -15,7 +17,8 @@
             <Button x:Name="button3" Content="Add " HorizontalAlignment="Left" Margin="288,14,0,0" VerticalAlignment="Top" Width="75"/>
             <Button x:Name="button4" Content="Order " HorizontalAlignment="Left" Margin="377,14,0,0" VerticalAlignment="Top" Width="75"/>
             <Button x:Name="button5" Content="Update" HorizontalAlignment="Left" Margin="467,14,0,0" VerticalAlignment="Top" Width="75"/>
-            <ListView Name="lvProductList" Margin="0,80,10,38" >
+            <ListView Name="lvProductList" Margin="0,80,10,38"  >
+           
                 <ListView.View>
                     <GridView>
                         <GridViewColumn Header="ID" Width="30" DisplayMemberBinding="{Binding ProductId}" />

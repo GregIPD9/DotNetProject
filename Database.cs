@@ -20,7 +20,7 @@ namespace MainSIMS
         public List<Product> GetAllProducts()
         {
             List<Product> result = new List<Product>();
-            using (SqlCommand command = new SqlCommand("SELECT * FROM Books", conn))
+            using (SqlCommand command = new SqlCommand("SELECT * FROM Products", conn))
             using (SqlDataReader reader = command.ExecuteReader())
             {
                 while (reader.Read())
