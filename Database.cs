@@ -13,7 +13,7 @@ namespace MainSIMS
 
         public Database()
         {
-            conn = new SqlConnection(@"Data Source=andrei-greg.database.windows.net;Initial Catalog=InventoryDB;Persist Security Info=True;User ID=DBadmin;Password=***********");
+            conn = new SqlConnection(@"Data Source=andrei-greg.database.windows.net;Initial Catalog=InventoryDB;Persist Security Info=True;User ID=DBadmin;Password=JohnIsGreat2000");
             conn.Open();
         }
 
@@ -26,12 +26,12 @@ namespace MainSIMS
                 while (reader.Read())
                 {
                     int id = (int)reader["ProductId"];
-                    string scu = (string)reader["Scu"];
+                    int scu = (int)reader["SCU"];
                     string productName = (string)reader["ProductName"];
                     decimal price = (decimal)reader["Price"];
                     int quantity = (int)reader["Quantity"];
                     string location = (string)reader["Location"];
-                    string category = (string)reader["CategoryName"];
+                    string category = (string)reader["Category"];
                     string supplierName = (string)reader["SupplierName"];
                     Product p = new Product(id, scu, productName, price, quantity, location, category, supplierName);
                     result.Add(p);

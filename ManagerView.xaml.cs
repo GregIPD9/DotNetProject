@@ -25,7 +25,7 @@ namespace InventoryApp
     /// </summary>
     public partial class ManagerView : Window
     {
-        //Database db;
+        Database db;
         // internal static object xaml;
     
 
@@ -33,7 +33,7 @@ namespace InventoryApp
         {
             try
             {
-               // db = new Database();
+                db = new Database();
                 InitializeComponent();
 
             }
@@ -74,7 +74,7 @@ namespace InventoryApp
                                 Console.WriteLine("{0} {1}", reader.GetString(0), reader.GetString(1));
 
 
-                                lvProductList.ItemsSource = 
+                                lvProductList.ItemsSource = db.GetAllProducts();
                             }
                         }
                     }
