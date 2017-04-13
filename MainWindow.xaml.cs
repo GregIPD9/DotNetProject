@@ -61,9 +61,10 @@ namespace InventoryApp
                                EmployeeView empl = new EmployeeView();
                                empl.Show();
                                break;
-                           /*   case "Supplier":
+                            case "Supplier":
                                SupplierView supplier = new SupplierView();
-                               supplier.Show(); */
+                               supplier.Show();
+                               break;
                         }
                  // Just for testing purpose, I'll keep this message here for now
                         MessageBox.Show("You have been successfully logged in.", "Message", MessageBoxButton.OK, MessageBoxImage.Information);  
