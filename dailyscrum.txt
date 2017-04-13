@@ -1,6 +1,29 @@
 InventoryApp 
 Teammembers: Andrei Sinkevich and Gregory Torakis
 
+--- April 13.5 Andrei
+DID SINCE LAST SCRUM:
+1. Work on AdminView (to display all and add new user)
+2. Display user database in UI Admin gridview 
+WILL DO IN THE NEXT 96 HOURS
+1. Work on AdminView (add/modify/delete user)
+2. AdminView display data to gridview
+WHERE I NEED HELP IS...
+1. Stored procedure (display/design)
+
+--- April 13.5 Gregory
+DID SINCE LAST SCRUM:
+1. UI SupplierView 
+2. impliment btLoad data to SupplierView gridview
+WILL DO IN THE NEXT 96 HOURS
+1. Work on SupplierView (Print, add btExport to PDF and impliment)
+2. Add Sign Out Button to all views
+3. Impliment Search product filter(Linq)
+WHERE I NEED HELP IS...
+1. Printing Reports/Charts
+
+============================================
+
 --- April 13 Andrei
 DID SINCE LAST SCRUM:
 1. Make all windows resizeable
