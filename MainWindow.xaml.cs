@@ -38,11 +38,11 @@ namespace InventoryApp
             }
             try
             {
-               using (Test2Entities test = new Test2Entities())
+               using (InventoryDBEntities login = new InventoryDBEntities())
                 {
-                    var query = from o in test.Users
-                                where o.Username == tbUser.Text && o.Password == tbPassword.Text && o.Role == ComboBoxRole.Text                           
-                                select o;
+                    var query = from user in login.Users
+                                where user.Username == tbUser.Text && user.Password == tbPassword.Text && user.Role == ComboBoxRole.Text                           
+                                select user;
                   
 
                     if (query.SingleOrDefault() != null)

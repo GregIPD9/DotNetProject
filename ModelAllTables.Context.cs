@@ -13,10 +13,10 @@ namespace MainSIMS
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class Test2Entities : DbContext
+    public partial class InventoryDBEntities : DbContext
     {
-        public Test2Entities()
-            : base("name=Test2Entities")
+        public InventoryDBEntities()
+            : base("name=InventoryDBEntities")
         {
         }
     
@@ -25,6 +25,11 @@ namespace MainSIMS
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<Category> Categories { get; set; }
+        public virtual DbSet<Location> Locations { get; set; }
+        public virtual DbSet<Order> Orders { get; set; }
+        public virtual DbSet<Product> Products { get; set; }
+        public virtual DbSet<Supplier> Suppliers { get; set; }
         public virtual DbSet<User> Users { get; set; }
     }
 }

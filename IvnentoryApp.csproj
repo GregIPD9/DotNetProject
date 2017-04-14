@@ -67,42 +67,49 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AllTablesModel.cs">
+      <DependentUpon>AllTablesModel.tt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="AllTablesModel.Designer.cs">
+      <DependentUpon>AllTablesModel.edmx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Category.cs">
+      <DependentUpon>AllTablesModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Database.cs" />
     <Compile Include="EmployeeView.xaml.cs">
       <DependentUpon>EmployeeView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Model.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model.Context.tt</DependentUpon>
+    <Compile Include="Location.cs">
+      <DependentUpon>AllTablesModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model.cs">
+    <Compile Include="ModelAllTables.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Model.tt</DependentUpon>
+      <DependentUpon>ModelAllTables.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model.Designer.cs">
+    <Compile Include="ModelAllTables.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Model.edmx</DependentUpon>
+      <DependentUpon>ModelAllTables.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelAllTables.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelAllTables.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Order.cs">
+      <DependentUpon>AllTablesModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Product.cs">
-      <DependentUpon>ProductsModel.tt</DependentUpon>
+      <DependentUpon>AllTablesModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="ProductsModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ProductsModel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ProductsModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ProductsModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ProductsModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ProductsModel.edmx</DependentUpon>
+    <Compile Include="Supplier.cs">
+      <DependentUpon>AllTablesModel.tt</DependentUpon>
     </Compile>
     <Compile Include="SupplierView.xaml.cs">
       <DependentUpon>SupplierView.xaml</DependentUpon>
@@ -111,7 +118,7 @@
       <DependentUpon>Test1.xaml</DependentUpon>
     </Compile>
     <Compile Include="User.cs">
-      <DependentUpon>Model.tt</DependentUpon>
+      <DependentUpon>AllTablesModel.tt</DependentUpon>
     </Compile>
     <Compile Include="ViewPO.xaml.cs">
       <DependentUpon>ViewPO.xaml</DependentUpon>
@@ -191,31 +198,18 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EntityDeploy Include="Model.edmx">
+    <EntityDeploy Include="AllTablesModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Model.Designer.cs</LastGenOutput>
+      <LastGenOutput>AllTablesModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="Model.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model.edmx</DependentUpon>
-      <LastGenOutput>Model.Context.cs</LastGenOutput>
-    </None>
-    <None Include="Model.edmx.diagram">
-      <DependentUpon>Model.edmx</DependentUpon>
-    </None>
-    <None Include="Model.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model.edmx</DependentUpon>
-      <LastGenOutput>Model.cs</LastGenOutput>
+    <EntityDeploy Include="ModelAllTables.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModelAllTables.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="ModelAllTables.edmx.diagram">
+      <DependentUpon>ModelAllTables.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
-    <EntityDeploy Include="ProductsModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>ProductsModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="ProductsModel.edmx.diagram">
-      <DependentUpon>ProductsModel.edmx</DependentUpon>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -235,12 +229,6 @@
     <Resource Include="Images\db1.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\toour.gif" />
-    <Resource Include="Images\simpinv.gif" />
-    <Resource Include="Images\mensis.gif" />
-    <Resource Include="Images\welcome.gif" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Images\ipd.gif" />
   </ItemGroup>
   <ItemGroup>
@@ -253,15 +241,20 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ProductsModel.Context.tt">
+    <Content Include="AllTablesModel.tt">
+      <DependentUpon>AllTablesModel.edmx</DependentUpon>
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ProductsModel.edmx</DependentUpon>
-      <LastGenOutput>ProductsModel.Context.cs</LastGenOutput>
+      <LastGenOutput>AllTablesModel.cs</LastGenOutput>
     </Content>
-    <Content Include="ProductsModel.tt">
+    <Content Include="ModelAllTables.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ProductsModel.edmx</DependentUpon>
-      <LastGenOutput>ProductsModel.cs</LastGenOutput>
+      <DependentUpon>ModelAllTables.edmx</DependentUpon>
+      <LastGenOutput>ModelAllTables.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="ModelAllTables.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelAllTables.edmx</DependentUpon>
+      <LastGenOutput>ModelAllTables.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
