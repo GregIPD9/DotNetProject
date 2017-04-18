@@ -41,42 +41,25 @@ namespace InventoryApp
         }
         private void buttonLoad_Click(object sender, RoutedEventArgs e)
         {
-            try
+            lvProductList.ItemsSource = db.GetAllProducts();            
+        }
+
+        private void TbFilter_OnTextChanged(object sender, TextChangedEventArgs e)
+        {
+            string filter = tbFilter.Text.ToLower();
+            if (filter == "")
             {
-                SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
-                builder.DataSource = "andrei-greg.database.windows.net";
-                builder.UserID = "DBadmin";
-                builder.Password = "JohnIsGreat2000";
-                builder.InitialCatalog = "InventoryDB";
-
-                using (SqlConnection connection = new SqlConnection(builder.ConnectionString))
-                {
-                    Console.WriteLine("\nQuery data example:");
-                    Console.WriteLine("=========================================\n");
-
-                    connection.Open();
-                    StringBuilder sb = new StringBuilder();
-                    sb.Append("SELECT ProductName, Location FROM [dbo].[Products]");
-                    String sql = sb.ToString();
-
-                    using (SqlCommand command = new SqlCommand(sql, connection))
-                    {
-                        using (SqlDataReader reader = command.ExecuteReader())
-                        {
-                            while (reader.Read())
-                            {
-                                Console.WriteLine("{0} {1}", reader.GetString(0), reader.GetString(1));
-
-
-                                lvProductList.ItemsSource = db.GetAllProducts();
-                            }
-                        }
-                    }
-                }
+                lvProductList.ItemsSource = db.GetAllProducts();
             }
-            catch (SqlException ex)
+            else
             {
-                Console.WriteLine(ex.ToString());
+                List<Product> list = db.GetAllProducts();
+                
+                var filteredList = from p in list
+                                   where p.ProductName.ToLower().Contains(filter) 
+                                   select p;
+
+                lvProductList.ItemsSource = filteredList;
             }
         }
 
