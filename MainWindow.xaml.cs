@@ -85,7 +85,7 @@ namespace InventoryApp
         private void passwBox_PasswordChanged(object sender, RoutedEventArgs e)
         {
             var box = sender as PasswordBox;
-            this.Title = "Password typed: " + box.Password;
+           // this.Title = "Password typed: " + box.Password;
         }       
     }
 }

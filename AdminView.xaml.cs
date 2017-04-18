@@ -23,5 +23,10 @@ namespace MainSIMS
         {
             InitializeComponent();
         }
+
+        private void btnViewAllUsers_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
