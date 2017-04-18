@@ -43,7 +43,6 @@ namespace InventoryApp
                     var query = from user in login.Users
                                 where user.Username == tbUser.Text && user.Password == passwBox.Password && user.Role == ComboBoxRole.Text                           
                                 select user;
-                  
 
                     if (query.SingleOrDefault() != null)
                     {
@@ -75,9 +74,9 @@ namespace InventoryApp
                     }
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show(ex.Message, "Message", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("I messed up the code here!!! Please ask PROF to HELP!!!", "Message", MessageBoxButton.OK, MessageBoxImage.Error);
 
             }
         }
@@ -85,7 +84,7 @@ namespace InventoryApp
         private void passwBox_PasswordChanged(object sender, RoutedEventArgs e)
         {
             var box = sender as PasswordBox;
-           // this.Title = "Password typed: " + box.Password;
+            this.Title = "Password typed: " + box.Password;
         }       
     }
 }

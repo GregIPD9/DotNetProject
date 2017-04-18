@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,14 +20,26 @@ namespace MainSIMS
     /// </summary>
     public partial class AdminView : Window
     {
+        Database db;
         public AdminView()
         {
-            InitializeComponent();
+            try
+            {
+                db = new Database();
+                InitializeComponent();
+
+            }
+            catch (SqlException e)
+            {
+                Console.WriteLine(e.StackTrace);
+                MessageBox.Show("Error opening database connection: " + e.Message);
+                Environment.Exit(1);
+            }
         }
 
         private void btnViewAllUsers_Click(object sender, RoutedEventArgs e)
         {
-
+            lvUsersList.ItemsSource = db.GetAllUsers();
         }
     }
 }

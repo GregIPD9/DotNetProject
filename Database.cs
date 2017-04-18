@@ -40,5 +40,23 @@ namespace MainSIMS
             return result;
         }
 
+        public List<User> GetAllUsers()
+        {
+            List<User> result = new List<User>();
+            using (SqlCommand command = new SqlCommand("SELECT * FROM Users", conn))
+            using (SqlDataReader reader = command.ExecuteReader())
+            {
+                while (reader.Read())
+                {
+                    int id = (int)reader["UserId"];
+                    string userName = (string)reader["Username"];
+                    string password = (string)reader["Password"];
+                    string role = (string)reader["Role"];
+                    User u = new User(id, userName, password, role);
+                    result.Add(u);
+                }
+            }
+            return result;
+        }
     }
 }

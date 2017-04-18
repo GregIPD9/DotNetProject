@@ -8,7 +8,7 @@
         Title="AdminView" Height="500" Width="573.405">
     <Viewbox VerticalAlignment="Top" Stretch="Uniform">
         <Grid Background="Azure" Margin="0,0,0,0">
-            <ListView Name="lvUsers" Margin="147,23,81.8,64" >
+            <ListView Name="lvUsersList" Margin="147,23,81.8,64" >
                 <ListView.View>
                     <GridView>
                         <GridViewColumn Header="UserId" Width="60" DisplayMemberBinding="{Binding UserId}" />

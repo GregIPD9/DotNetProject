@@ -14,6 +14,19 @@ namespace MainSIMS
     
     public partial class User
     {
+       // private int id;
+  
+        public User(int id, string userName, string password, string role)
+        {
+            // TODO: Complete member initialization
+            UserId = id;
+            Username = userName;
+            Password = password;
+            Role = role;
+        }
+
+        public User()
+        { }
         public int UserId { get; set; }
         public string Username { get; set; }
         public string Password { get; set; }
