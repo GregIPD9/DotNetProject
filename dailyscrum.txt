@@ -8,6 +8,7 @@ DID SINCE LAST SCRUM:
 WILL DO IN THE NEXT 24 HOURS
 1. AdminView (modify user)
 2. Passowrd hidden 
+3. Work on AdminView (add/modify/delete users)
 WHERE I NEED HELP IS...
 1. Stored procedure (display/design)
 
