@@ -14,11 +14,11 @@ namespace MainSIMS
     
     public partial class Product
     {
-        private int id;
+      //  private int id;
 
         public Product(int id, int scu, string productName, decimal price, int quantity, string location, string category, string supplierName)
         {
-            this.id = id;
+            ProductId = id;
             SCU = scu;
             ProductName = productName;
             Price = price;
@@ -28,6 +28,8 @@ namespace MainSIMS
             SupplierName = supplierName;
         }
 
+        public Product()
+        { }
         public int ProductId { get; set; }
         public string ProductName { get; set; }
         public string Category { get; set; }

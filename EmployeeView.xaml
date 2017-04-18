@@ -15,7 +15,7 @@
                 <ListView.View>
                     <GridView>
                         <GridViewColumn Header="ID" Width="30" DisplayMemberBinding="{Binding ProductId}" />
-                        <GridViewColumn Header="SCU" Width="80" DisplayMemberBinding="{Binding Scu}" />
+                        <GridViewColumn Header="SCU" Width="80" DisplayMemberBinding="{Binding SCU}" />
                         <GridViewColumn Header="Name" Width="100" DisplayMemberBinding="{Binding ProductName}" />
                         <GridViewColumn Header="Price" Width="60" DisplayMemberBinding="{Binding Price}" />
                         <GridViewColumn Header="Quantity" Width="60" DisplayMemberBinding="{Binding Quantity}" />
