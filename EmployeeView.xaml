@@ -11,26 +11,27 @@
             <Button x:Name="button1" Content="Print All" HorizontalAlignment="Left" Margin="283,14,0,0" VerticalAlignment="Top" Width="75"/>
             <Button x:Name="button2" Content="Print Selected" HorizontalAlignment="Left" Margin="363,14,0,0" VerticalAlignment="Top" Width="89"/>
             <Button x:Name="button3" Content="Modify Selected" HorizontalAlignment="Left" Margin="462,14,0,0" VerticalAlignment="Top" Width="109"/>
-            <ListView Name="lvUsers" Margin="0,80,10,38" >
+            <ListView Name="lvProductList" Margin="0,80,10,38" >
                 <ListView.View>
                     <GridView>
-                        <GridViewColumn Header="ID" Width="30" DisplayMemberBinding="{Binding Id}" />
+                        <GridViewColumn Header="ID" Width="30" DisplayMemberBinding="{Binding ProductId}" />
                         <GridViewColumn Header="SCU" Width="80" DisplayMemberBinding="{Binding Scu}" />
-                        <GridViewColumn Header="Name" Width="100" DisplayMemberBinding="{Binding Name}" />
-                        <GridViewColumn Header="Price" Width="60" DisplayMemberBinding="{Binding Name}" />
+                        <GridViewColumn Header="Name" Width="100" DisplayMemberBinding="{Binding ProductName}" />
+                        <GridViewColumn Header="Price" Width="60" DisplayMemberBinding="{Binding Price}" />
                         <GridViewColumn Header="Quantity" Width="60" DisplayMemberBinding="{Binding Quantity}" />
                         <GridViewColumn Header="Location" Width="60" DisplayMemberBinding="{Binding Location}" />
                         <GridViewColumn Header="Category" Width="80" DisplayMemberBinding="{Binding Category}" />
-                        <GridViewColumn Header="Supplier" Width="90" DisplayMemberBinding="{Binding Supplier}" />
+                        <GridViewColumn Header="Supplier" Width="90" DisplayMemberBinding="{Binding SupplierName}" />
                     </GridView>
                 </ListView.View>
             </ListView>
             <Image x:Name="image" Source="Images/db.jpeg" Opacity="0.1" HorizontalAlignment="Left" Height="370" VerticalAlignment="Top" Width="538" Margin="10,62,0,0"/>
             <Button x:Name="button10" Content="Request" HorizontalAlignment="Left" Margin="437,440,0,0" VerticalAlignment="Top" Width="105"/>
-            <Label x:Name="label" Content="Search product:" HorizontalAlignment="Left" Margin="64,44,0,0" VerticalAlignment="Top" Width="100"/>
-            <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="169,47,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="283"/>
+            <Label x:Name="label" Content="Search product:" HorizontalAlignment="Left" Margin="10,44,0,0" VerticalAlignment="Top" Width="100"/>
+            <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="110,47,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="283"/>
             <Label Content="Logged in as:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="78"/>
             <Label x:Name="LoggedInAs" Content="..." HorizontalAlignment="Left" Margin="93,10,0,0" VerticalAlignment="Top" Width="164"/>
+            <Button x:Name="btloadProducts" Content="Load Products" Click="btloadProducts_Click" HorizontalAlignment="Left" Margin="462,48,0,0" VerticalAlignment="Top" Width="108"/>
 
         </Grid>
     </Viewbox>
