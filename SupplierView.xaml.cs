@@ -79,5 +79,13 @@ namespace InventoryApp
                 Console.WriteLine(ex.ToString());
             }
         }
+
+        private void buttonSignOut_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+            MessageBox.Show("You have been successfully signed out.", "Message", MessageBoxButton.OK, MessageBoxImage.Information);
+            MainWindow window = new MainWindow();
+            window.Show();
+        }
     }
 }
