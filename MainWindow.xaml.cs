@@ -41,7 +41,7 @@ namespace InventoryApp
                using (InventoryDBEntities login = new InventoryDBEntities())
                 {
                     var query = from user in login.Users
-                                where user.Username == tbUser.Text && user.Password == tbPassword.Text && user.Role == ComboBoxRole.Text                           
+                                where user.Username == tbUser.Text && user.Password == passwBox.Password && user.Role == ComboBoxRole.Text                           
                                 select user;
                   
 
@@ -80,6 +80,12 @@ namespace InventoryApp
                 MessageBox.Show(ex.Message, "Message", MessageBoxButton.OK, MessageBoxImage.Error);
 
             }
+        }
+
+        private void passwBox_PasswordChanged(object sender, RoutedEventArgs e)
+        {
+            var box = sender as PasswordBox;
+            this.Title = "Password typed: " + box.Password;
         }       
     }
 }
