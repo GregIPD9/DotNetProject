@@ -41,5 +41,13 @@ namespace MainSIMS
         {
             lvUsersList.ItemsSource = db.GetAllUsers();
         }
+
+        private void btnAddUser_Click(object sender, RoutedEventArgs e)
+        {
+            AddUser win = new AddUser();
+            win.ShowDialog();
+            // lvUsersList.UpdateLayout();
+            lvUsersList.ItemsSource = db.GetAllUsers();
+        }
     }
 }
