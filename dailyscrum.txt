@@ -3,6 +3,27 @@ Teammembers: Andrei Sinkevich and Gregory Torakis
 
 --- April 18 Andrei
 DID SINCE LAST SCRUM:
+1. AdminView (add user)
+WILL DO IN THE NEXT 24 HOURS
+1. AdminView (modify user)
+2. AdminView (delete user)
+WHERE I NEED HELP IS...
+1. Stored procedure (display/design)
+
+--- April 18 Gregory
+DID SINCE LAST SCRUM:
+1. SupplierView Sign out function
+2. Impliment Search product filter(SupplierView)
+WILL DO IN THE NEXT 24 HOURS
+1. Add Sign out to ManagerView/EmployeeView/AdminView
+2. Add Search product filter to ManagerView/EmployeeView
+WHERE I NEED HELP IS...
+1. Printing Reports/Charts
+
+============================================
+
+--- April 18 Andrei
+DID SINCE LAST SCRUM:
 1. AdminView (add/delete user)
 2. AdminView display data to gridview
 WILL DO IN THE NEXT 24 HOURS
