@@ -7,18 +7,30 @@
         mc:Ignorable="d"
         Title="ModifyUser" Height="300" Width="300">
     <Grid Background="Azure">
-        <Label x:Name="label" Content="User:" HorizontalAlignment="Left" Margin="32,57,0,0" VerticalAlignment="Top"/>
+        
+        <Label x:Name="label" Content="Username:" HorizontalAlignment="Left" Margin="32,57,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="-1.66"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="0.371"/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
         <Label x:Name="label_Copy" Content="Password:" HorizontalAlignment="Left" Margin="32,98,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label_Copy1" Content="Privilege:" HorizontalAlignment="Left" Margin="32,140,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="119,60,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="textBox_Copy" HorizontalAlignment="Left" Height="23" Margin="119,101,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="119,144,0,0" VerticalAlignment="Top" Width="120">
-            <ComboBoxItem Content="Administrator" HorizontalAlignment="Left" Width="118"/>
+        <Label x:Name="label_Copy1" Content="Role:" HorizontalAlignment="Left" Margin="32,140,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="tbUserNameInModify" HorizontalAlignment="Left" Height="23" Margin="119,60,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="tbPasswordInmodify" HorizontalAlignment="Left" Height="23" Margin="119,101,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <ComboBox x:Name="comboBoxRoleInModify" HorizontalAlignment="Left" Margin="119,144,0,0" VerticalAlignment="Top" Width="120">
+            <ComboBoxItem Content="Admin" HorizontalAlignment="Left" Width="118"/>
             <ComboBoxItem Content="Manager" HorizontalAlignment="Left" Width="118"/>
             <ComboBoxItem Content="Employee" HorizontalAlignment="Left" Width="118"/>
-            <ComboBoxItem Content="Guest" HorizontalAlignment="Left" Width="118"/>
+            <ComboBoxItem Content="Supplier" HorizontalAlignment="Left" Width="118"/>
         </ComboBox>
-        <Button x:Name="button" Content="Modify User" HorizontalAlignment="Left" Margin="106,201,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="btnSaveChanges" Click="btnSaveChanges_Click" Content="Save changes" HorizontalAlignment="Left" Margin="106,201,0,0" VerticalAlignment="Top" Width="95" Height="28"/>
+        <Label Content="UserId:" HorizontalAlignment="Left" Margin="42,21,0,0" VerticalAlignment="Top" Height="26" Width="52"/>
+        <Label x:Name="lblUserId" Content="..." HorizontalAlignment="Left" Margin="119,21,0,0" VerticalAlignment="Top" Width="82"/>
 
     </Grid>
 </Window>

@@ -12,6 +12,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using MainSIMS;
 
 namespace MainSIMS
 {
@@ -21,13 +22,14 @@ namespace MainSIMS
     public partial class AdminView : Window
     {
         Database db;
+        int selectedItemIndex;
         public AdminView()
         {
             try
             {
                 db = new Database();
                 InitializeComponent();
-
+                //refreshUsersList();
             }
             catch (SqlException e)
             {
@@ -52,22 +54,43 @@ namespace MainSIMS
 
         private void btnDeleteUser_Click(object sender, RoutedEventArgs e)
         {
-            using (InventoryDBEntities db = new InventoryDBEntities())
+            // lvUsersList.Items.RemoveAt(lvUsersList.Items.IndexOf(lvUsersList.SelectedItem));
+            try
             {
-               /* db.Users.Attach(obj);
-                db.Users.Remove(obj);
-                db.SaveChanges();*/
+                using (InventoryDBEntities ctx = new InventoryDBEntities())
+                {
+                    User selected = (User) lvUsersList.SelectedItem;
+                    User u = ctx.Users.Find(Convert.ToInt32(selected.UserId));
+                    ctx.Users.Remove(u);
+                    ctx.SaveChanges();
+                }
             }
-           
-
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            refreshUsersList();
         }
 
-
-        private void getSelectedItem(object sender, MouseButtonEventArgs e)
+        private void btnModifyUser_Click(object sender, RoutedEventArgs e)
         {
-            User user = (User)lvUsersList.SelectedItems[0];
+            ModifyUser win = new ModifyUser();
+            User u =(User) lvUsersList.Items.GetItemAt(selectedItemIndex);
+            win.lblUserId.Content = u.UserId;
+            win.tbUserNameInModify.Text = u.Username;
+            win.tbPasswordInmodify.Text = u.Password;
+            win.comboBoxRoleInModify.Text = u.Role;
+            win.Show();
+        }
 
-            System.Windows.MessageBox.Show(lvUsersList.SelectedItems[0].ToString());
+        private void lvUsersList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            selectedItemIndex = lvUsersList.SelectedIndex;
+        }
+
+        public void refreshUsersList() 
+        { 
+            lvUsersList.ItemsSource = db.GetAllUsers();
         }
     }
 }

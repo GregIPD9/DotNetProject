@@ -5,26 +5,27 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MainSIMS"
         mc:Ignorable="d"
-        Title="AdminView" Height="500" Width="573.405">
-    <Viewbox VerticalAlignment="Top" Stretch="Uniform">
-        <Grid Background="Azure" Margin="0,0,0,0">
-            <ListView Name="lvUsersList" 
-                      SelectionMode="Single" Margin="147,23,81.8,64" >
+        Title="AdminView" Height="370.4" Width="470.405">
+    <Viewbox VerticalAlignment="Top" Stretch="Uniform" >
+        <Grid Background="Azure" Margin="0,0,0,0" Width="449" Height="334">
+
+            <Image x:Name="image" Source="Images/db.jpeg"  HorizontalAlignment="Left" Height="277" VerticalAlignment="Top" Width="372" Margin="39,53,0,0"/>
+
+            <ListView x:Name="lvUsersList" SelectionChanged="lvUsersList_SelectionChanged"
+        		Opacity="0.9" Margin="29,53,29,22.6" >
                 <ListView.View>
                     <GridView>
-                        <GridViewColumn Header="UserId" Width="60" DisplayMemberBinding="{Binding UserId}" />
+                        <GridViewColumn Header="UserId" Width="70" DisplayMemberBinding="{Binding UserId}" />
                         <GridViewColumn Header="Username" Width="100" DisplayMemberBinding="{Binding Username}" />
-                        <GridViewColumn Header="Password" Width="80" DisplayMemberBinding="{Binding Password}" />
-                        <GridViewColumn Header="Role" Width="80" DisplayMemberBinding="{Binding Role}" />
+                        <GridViewColumn Header="Password" Width="110" DisplayMemberBinding="{Binding Password}" />
+                        <GridViewColumn Header="Role" Width="110" DisplayMemberBinding="{Binding Role}" />
                     </GridView>
                 </ListView.View>
             </ListView>
-            <Button x:Name="button2" Content="Modify User" HorizontalAlignment="Left" Margin="29,102,0,0" VerticalAlignment="Top" Width="94"/>
-            <Button x:Name="btnDeleteUser" Click="btnDeleteUser_Click" Content="Delete User" HorizontalAlignment="Left" Margin="29,146,0,0" VerticalAlignment="Top" Width="94"/>
-            <Image x:Name="image" Source="Images/db.jpeg" Opacity="0.1" HorizontalAlignment="Left" Height="370" VerticalAlignment="Top" Width="538" Margin="10,62,0,0"/>
-            <Button x:Name="btnAddUser" Click="btnAddUser_Click" Content="Add User" HorizontalAlignment="Left" Margin="29,62,0,0" VerticalAlignment="Top" Width="94"/>
+            <Button x:Name="btnModifyUser" Click="btnModifyUser_Click" Content="Modify User" HorizontalAlignment="Left" Margin="227,24,0,0" VerticalAlignment="Top" Width="94"/>
+            <Button x:Name="btnDeleteUser" Click="btnDeleteUser_Click" Content="Delete User" HorizontalAlignment="Left" Margin="326,24,0,0" VerticalAlignment="Top" Width="94"/>
+            <Button x:Name="btnAddUser" Click="btnAddUser_Click" Content="Add User" HorizontalAlignment="Left" Margin="128,24,0,0" VerticalAlignment="Top" Width="94"/>
             <Button x:Name="btnViewAllUsers" Content="View All Users" Click="btnViewAllUsers_Click" HorizontalAlignment="Left" Margin="29,24,0,0" VerticalAlignment="Top" Width="94" Height="24"/>
-
         </Grid>
     </Viewbox>
 </Window>

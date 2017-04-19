@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -58,5 +59,17 @@ namespace MainSIMS
             }
             return result;
         }
+
+        internal void UpdateUser(User u) {
+
+            string sql = "UPDATE users SET Username = @Username, Password = @Password, Role = @Role WHERE UserId=@UserId"; 
+            SqlCommand cmd = new SqlCommand(sql, conn); 
+            cmd.Parameters.Add("@UserId", SqlDbType.Int).Value = u.UserId; 
+            cmd.Parameters.Add("@Username", SqlDbType.NVarChar).Value = u.Username;
+            cmd.Parameters.Add("@Password", SqlDbType.NVarChar).Value = u.Password;
+            cmd.Parameters.Add("@Role", SqlDbType.NVarChar).Value = u.Role;
+            cmd.CommandType = CommandType.Text; cmd.ExecuteNonQuery(); 
+        }
+
     }
 }
