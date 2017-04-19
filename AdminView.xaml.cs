@@ -49,5 +49,25 @@ namespace MainSIMS
             // lvUsersList.UpdateLayout();
             lvUsersList.ItemsSource = db.GetAllUsers();
         }
+
+        private void btnDeleteUser_Click(object sender, RoutedEventArgs e)
+        {
+            using (InventoryDBEntities db = new InventoryDBEntities())
+            {
+               /* db.Users.Attach(obj);
+                db.Users.Remove(obj);
+                db.SaveChanges();*/
+            }
+           
+
+        }
+
+
+        private void getSelectedItem(object sender, MouseButtonEventArgs e)
+        {
+            User user = (User)lvUsersList.SelectedItems[0];
+
+            System.Windows.MessageBox.Show(lvUsersList.SelectedItems[0].ToString());
+        }
     }
 }

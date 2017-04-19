@@ -8,7 +8,8 @@
         Title="AdminView" Height="500" Width="573.405">
     <Viewbox VerticalAlignment="Top" Stretch="Uniform">
         <Grid Background="Azure" Margin="0,0,0,0">
-            <ListView Name="lvUsersList" Margin="147,23,81.8,64" >
+            <ListView Name="lvUsersList" 
+                      SelectionMode="Single" Margin="147,23,81.8,64" >
                 <ListView.View>
                     <GridView>
                         <GridViewColumn Header="UserId" Width="60" DisplayMemberBinding="{Binding UserId}" />
@@ -19,7 +20,7 @@
                 </ListView.View>
             </ListView>
             <Button x:Name="button2" Content="Modify User" HorizontalAlignment="Left" Margin="29,102,0,0" VerticalAlignment="Top" Width="94"/>
-            <Button x:Name="button5" Content="Delete User" HorizontalAlignment="Left" Margin="29,146,0,0" VerticalAlignment="Top" Width="94"/>
+            <Button x:Name="btnDeleteUser" Click="btnDeleteUser_Click" Content="Delete User" HorizontalAlignment="Left" Margin="29,146,0,0" VerticalAlignment="Top" Width="94"/>
             <Image x:Name="image" Source="Images/db.jpeg" Opacity="0.1" HorizontalAlignment="Left" Height="370" VerticalAlignment="Top" Width="538" Margin="10,62,0,0"/>
             <Button x:Name="btnAddUser" Click="btnAddUser_Click" Content="Add User" HorizontalAlignment="Left" Margin="29,62,0,0" VerticalAlignment="Top" Width="94"/>
             <Button x:Name="btnViewAllUsers" Content="View All Users" Click="btnViewAllUsers_Click" HorizontalAlignment="Left" Margin="29,24,0,0" VerticalAlignment="Top" Width="94" Height="24"/>
