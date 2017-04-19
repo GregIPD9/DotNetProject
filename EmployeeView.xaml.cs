@@ -40,45 +40,7 @@ namespace MainSIMS
 
         private void btloadProducts_Click(object sender, RoutedEventArgs e)
         {
-            try
-            {
-                SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
-                builder.DataSource = "andrei-greg.database.windows.net";
-                builder.UserID = "DBadmin";
-                builder.Password = "JohnIsGreat2000";
-                builder.InitialCatalog = "InventoryDB";
-
-                using (SqlConnection connection = new SqlConnection(builder.ConnectionString))
-                {
-                    Console.WriteLine("\nQuery data example:");
-                    Console.WriteLine("=========================================\n");
-
-                    connection.Open();
-                    StringBuilder sb = new StringBuilder();
-                    sb.Append("SELECT ProductName, Location FROM [dbo].[Products]");
-                    String sql = sb.ToString();
-
-                    using (SqlCommand command = new SqlCommand(sql, connection))
-                    {
-                        using (SqlDataReader reader = command.ExecuteReader())
-                        {
-                            while (reader.Read())
-                            {
-                                Console.WriteLine("{0} {1}", reader.GetString(0), reader.GetString(1));
-
-
-                                lvProductList.ItemsSource = db.GetAllProducts();
-                            }
-                        }
-                    }
-                }
-            }
-            catch (SqlException ex)
-            {
-                Console.WriteLine(ex.ToString());
-            }
+            lvProductList.ItemsSource = db.GetAllProducts();                            
         }
-
-       
     }
 }

@@ -30,7 +30,7 @@
             </Image>
             <Image x:Name="image4_Copy" Source="Images/system1.png" HorizontalAlignment="Left" Height="31" Margin="458,139,-112,0" VerticalAlignment="Top" Width="271"/>
             <Image x:Name="image5" Source="Images/ipd.gif" HorizontalAlignment="Left" Height="36" Margin="10,424,0,0" VerticalAlignment="Top" Width="100"/>
-            <ComboBox x:Name="ComboBoxRole" HorizontalAlignment="Left" Margin="163,290,0,0" VerticalAlignment="Top" Width="136">
+            <ComboBox x:Name="ComboBoxRole" HorizontalAlignment="Left" Margin="163,290,0,0" VerticalAlignment="Top" Width="136" ToolTip="Choose role">
                 <ComboBoxItem x:Name="ComboBoxAdmin" Content="Admin" HorizontalAlignment="Left" Width="134.4"/>
                 <ComboBoxItem x:Name="ComboBoxManager" Content="Manager" HorizontalAlignment="Left" Width="134.4"/>
                 <ComboBoxItem x:Name="ComboBoxEmployee" Content="Employee" HorizontalAlignment="Left" Width="134.4"/>

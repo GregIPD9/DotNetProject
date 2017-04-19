@@ -65,10 +65,13 @@ namespace InventoryApp
 
         private void buttonSignOut_Click(object sender, RoutedEventArgs e)
         {
-            Close();
             MessageBox.Show("You have been successfully signed out.", "Message", MessageBoxButton.OK, MessageBoxImage.Information);
+            this.Close();
+            /*Todo: Refresh MainWindow
             MainWindow window = new MainWindow();
-            window.Show();
+            window.Show();*/
+            
+  
         }
     }
 }

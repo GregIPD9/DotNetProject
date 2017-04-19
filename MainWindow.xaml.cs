@@ -49,38 +49,40 @@ namespace InventoryApp
                         switch (ComboBoxRole.Text)
                         {
                             case "Admin":
-                               AdminView admin = new AdminView();
-                               admin.Show();
-                               break;
+                                AdminView admin = new AdminView();
+                                admin.Show();
+                                break;
                             case "Manager":
-                               ManagerView manager = new ManagerView();
-                               manager.Show();
-                               break;
+                                ManagerView manager = new ManagerView();
+                                manager.Show();
+                                break;
                             case "Employee":
-                               EmployeeView empl = new EmployeeView();
-                               empl.Show();
-                               break;
+                                EmployeeView empl = new EmployeeView();
+                                empl.Show();
+                                break;
                             case "Supplier":
-                               SupplierView supplier = new SupplierView();
-                               supplier.Show();
-                               break;
+                                SupplierView supplier = new SupplierView();
+                                supplier.Show();
+                                break;
                         }
-                 // Just for testing purpose, I'll keep this message here for now
-                        MessageBox.Show("You have been successfully logged in.", "Message", MessageBoxButton.OK, MessageBoxImage.Information);  
+                        // Just for testing purpose, I'll keep this message here for now
+                        MessageBox.Show("You have been successfully logged in.", "Message", MessageBoxButton.OK, MessageBoxImage.Information);
+
                     }
                     else
                     {
                         MessageBox.Show("Your username or password is incorrect.", "Message", MessageBoxButton.OK, MessageBoxImage.Information);
-                    }
+                    }                 
                 }
             }
             catch (Exception)
             {
                 MessageBox.Show("I messed up the code here!!! Please ask PROF to HELP!!!", "Message", MessageBoxButton.OK, MessageBoxImage.Error);
-
             }
+            tbUser.Clear();
+            passwBox.Clear();
         }
-
+     
         private void passwBox_PasswordChanged(object sender, RoutedEventArgs e)
         {
             var box = sender as PasswordBox;
