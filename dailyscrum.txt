@@ -1,7 +1,7 @@
 InventoryApp 
 Teammembers: Andrei Sinkevich and Gregory Torakis
 
---- April 18 Andrei
+--- April 19 Andrei
 DID SINCE LAST SCRUM:
 1. AdminView (add user)
 WILL DO IN THE NEXT 24 HOURS
@@ -10,7 +10,7 @@ WILL DO IN THE NEXT 24 HOURS
 WHERE I NEED HELP IS...
 1. Stored procedure (display/design)
 
---- April 18 Gregory
+--- April 19 Gregory
 DID SINCE LAST SCRUM:
 1. SupplierView Sign out function
 2. Impliment Search product filter(SupplierView)
