@@ -16,7 +16,8 @@ DID SINCE LAST SCRUM:
 2. Impliment Search product filter(SupplierView)
 WILL DO IN THE NEXT 24 HOURS
 1. Add Sign out to ManagerView/EmployeeView/AdminView
-2. Add Search product filter to ManagerView/EmployeeView
+2. Add Search product filter to ManagerView/EmployeeView (search in all fields)
+3. Login label (userName and userId)
 WHERE I NEED HELP IS...
 1. Printing Reports/Charts
 
