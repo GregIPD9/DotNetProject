@@ -56,7 +56,11 @@ namespace InventoryApp
                 List<Product> list = db.GetAllProducts();
                 
                 var filteredList = from p in list
-                                   where p.ProductName.ToLower().Contains(filter)                                       
+                                   where p.ProductName.ToLower().Contains(filter) /* || 
+                                   p.Location.ToLower().Contains(filter) ||
+                                   p.SupplierName.ToLower().Contains(filter) ||
+                                   p.Descrition.ToLower().Contains(filter) ||
+                                   p.ProductId.ToString().Contains(filter)*/
                                    select p;
 
                 lvProductList.ItemsSource = filteredList;
