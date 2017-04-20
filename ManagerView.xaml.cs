@@ -52,5 +52,30 @@ namespace InventoryApp
             prod.ShowDialog();
             lvProductList.ItemsSource = db.GetAllProducts();
         }
+
+        private void btnDeleteProduct_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                using (InventoryDBEntities ctx = new InventoryDBEntities())
+                {
+                    Product selected = (Product)lvProductList.SelectedItem;
+                    Product p = ctx.Products.Find(Convert.ToInt32(selected.ProductId));
+                    ctx.Products.Remove(p);
+                    ctx.SaveChanges();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            refreshProductsList();
+        }
+
+        public void refreshProductsList()
+        {
+            lvProductList.ItemsSource = db.GetAllProducts();
+        }
+
     }
 }
