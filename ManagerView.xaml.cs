@@ -45,5 +45,12 @@ namespace InventoryApp
         {
             lvProductList.ItemsSource = db.GetAllProducts();
         }
+
+        private void btnAddNewProduct_Click(object sender, RoutedEventArgs e)
+        {
+            AddProduct prod = new AddProduct();
+            prod.ShowDialog();
+            lvProductList.ItemsSource = db.GetAllProducts();
+        }
     }
 }

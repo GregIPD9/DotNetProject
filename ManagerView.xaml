@@ -15,7 +15,7 @@
             <Button x:Name="btLoad" Content="Load " Click="buttonLoad_Click" HorizontalAlignment="Left" Margin="10,14,0,0" VerticalAlignment="Top" Width="75"/>
             <Button x:Name="button1" Content="Print" HorizontalAlignment="Left" Margin="103,14,0,0" VerticalAlignment="Top" Width="75"/>
             <Button x:Name="button2" Content="Edit" HorizontalAlignment="Left" Margin="194,14,0,0" VerticalAlignment="Top" Width="75"/>
-            <Button x:Name="button3" Content="Add " HorizontalAlignment="Left" Margin="288,14,0,0" VerticalAlignment="Top" Width="75"/>
+            <Button x:Name="btnAddNewProduct" Click="btnAddNewProduct_Click" Content="Add " HorizontalAlignment="Left" Margin="288,14,0,0" VerticalAlignment="Top" Width="75"/>
             <Button x:Name="button4" Content="Order " HorizontalAlignment="Left" Margin="377,14,0,0" VerticalAlignment="Top" Width="75"/>
             <Button x:Name="button5" Content="Update" HorizontalAlignment="Left" Margin="467,14,0,0" VerticalAlignment="Top" Width="75"/>
             <ListView Name="lvProductList" Opacity="0.9" Margin="0,88,10,30"  >

@@ -67,6 +67,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AddProduct.xaml.cs">
+      <DependentUpon>AddProduct.xaml</DependentUpon>
+    </Compile>
     <Compile Include="AllTablesModel.cs">
       <DependentUpon>AllTablesModel.tt</DependentUpon>
       <DesignTime>True</DesignTime>
@@ -123,6 +126,10 @@
     <Compile Include="ViewPO.xaml.cs">
       <DependentUpon>ViewPO.xaml</DependentUpon>
     </Compile>
+    <Page Include="AddProduct.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="AddUser.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
