@@ -1,6 +1,31 @@
 InventoryApp 
 Teammembers: Andrei Sinkevich and Gregory Torakis
 
+--- April 20 Andrei
+DID SINCE LAST SCRUM:
+1. added AdminView (modify user)
+2. added AdminView (delete user)
+3. added ManagerView add/delete product
+4. fixed background image on all views (for select function)
+WILL DO IN THE NEXT 24 HOURS
+1. ManagerView edit product (TODO- parse decimal/int)
+2. Implement EmployeeView add/delete/edit product
+WHERE I NEED HELP IS...
+1. 
+
+--- April 20 Gregory
+DID SINCE LAST SCRUM:
+1. SupplierView Sign out function
+2. Impliment Search product filter(SupplierView)
+WILL DO IN THE NEXT 24 HOURS
+1. Add Sign out to ManagerView/EmployeeView/AdminView
+2. Add Search product filter to ManagerView/EmployeeView (search in all fields)
+3. Login label (userName and userId)
+WHERE I NEED HELP IS...
+1. Printing Reports/Charts
+
+============================================
+
 --- April 19 Andrei
 DID SINCE LAST SCRUM:
 1. AdminView (add user)
