@@ -92,5 +92,11 @@ namespace MainSIMS
         { 
             lvUsersList.ItemsSource = db.GetAllUsers();
         }
+
+        private void buttonSignOut_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("You have been successfully signed out.", "Message", MessageBoxButton.OK, MessageBoxImage.Information);
+            this.Close();
+        }
     }
 }

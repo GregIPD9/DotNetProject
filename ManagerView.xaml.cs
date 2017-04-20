@@ -86,9 +86,9 @@ namespace InventoryApp
             mod.tbProductNameEdit.Text = p.ProductName;
             mod.tbCategoryEdit.Text = p.Category;
             mod.tbDescriptionEdit.Text = p.Descrition;
-           // mod.Content.ToDecimal(this.tbPriceEdit.Text) = p.Price;
-          //  mod.Convert.tbSCUEdit.Text = p.SCU;
-          //  mod.tbQuantityEdit.Text = p.Quantity;
+            mod.tbPriceEdit.Text = p.Price.ToString();
+            mod.tbSCUEdit.Text = p.SCU.ToString();
+            mod.tbQuantityEdit.Text = p.Quantity.ToString();
             mod.tbLocationEdit.Text = p.Location;
             mod.tbSupplierEdit.Text = p.SupplierName;
             mod.Show();
@@ -98,6 +98,12 @@ namespace InventoryApp
         private void lvProductList_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             selectedProductIndex = lvProductList.SelectedIndex;
+        }
+
+        private void buttonSignOut_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("You have been successfully signed out.", "Message", MessageBoxButton.OK, MessageBoxImage.Information);
+            this.Close();
         }
     }
 }

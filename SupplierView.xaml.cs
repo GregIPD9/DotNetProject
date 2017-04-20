@@ -56,7 +56,7 @@ namespace InventoryApp
                 List<Product> list = db.GetAllProducts();
                 
                 var filteredList = from p in list
-                                   where p.ProductName.ToLower().Contains(filter) 
+                                   where p.ProductName.ToLower().Contains(filter)                                       
                                    select p;
 
                 lvProductList.ItemsSource = filteredList;
@@ -67,11 +67,6 @@ namespace InventoryApp
         {
             MessageBox.Show("You have been successfully signed out.", "Message", MessageBoxButton.OK, MessageBoxImage.Information);
             this.Close();
-            /*Todo: Refresh MainWindow
-            MainWindow window = new MainWindow();
-            window.Show();*/
-            
-  
         }
     }
 }

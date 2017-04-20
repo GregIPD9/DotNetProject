@@ -42,5 +42,11 @@ namespace MainSIMS
         {
             lvProductList.ItemsSource = db.GetAllProducts();                            
         }
+
+        private void buttonSignOut_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("You have been successfully signed out.", "Message", MessageBoxButton.OK, MessageBoxImage.Information);
+            this.Close();
+        }
     }
 }
