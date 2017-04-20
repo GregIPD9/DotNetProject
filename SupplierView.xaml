@@ -10,11 +10,12 @@
     <Viewbox VerticalAlignment="Top" Stretch="Uniform">
 
         <Grid Background="Azure" Margin="0,0,0,0">
+            <Image x:Name="image" Source="Images/db.jpeg" HorizontalAlignment="Left" Height="370" VerticalAlignment="Top" Width="538" Margin="10,70,0,-8"/>
 
             <Button x:Name="button" Content="Load " Click="buttonLoad_Click" HorizontalAlignment="Left" Margin="10,14,0,0" VerticalAlignment="Top" Width="75"/>
             <Button x:Name="button1" Content="Print" HorizontalAlignment="Left" Margin="103,14,0,0" VerticalAlignment="Top" Width="75"/>
             <Button x:Name="btSignOut" Content="Sign out" Click="buttonSignOut_Click" HorizontalAlignment="Left" Margin="495,400,0,0" VerticalAlignment="Top" Width="75"/>
-            <ListView Name="lvProductList" Margin="0,80,10,38"  >
+            <ListView Name="lvProductList" Opacity="0.9" Margin="0,80,10,38"  >
 
                 <ListView.View>
                     <GridView>
@@ -29,7 +30,6 @@
                     </GridView>
                 </ListView.View>
             </ListView>
-            <Image x:Name="image" Source="Images/db.jpeg" Opacity="0.1" HorizontalAlignment="Left" Height="370" VerticalAlignment="Top" Width="538" Margin="10,62,0,0"/>
             <Label x:Name="label" Content="Search product:" HorizontalAlignment="Left" Margin="64,44,0,0" VerticalAlignment="Top" Width="100"/>
             <TextBox TextChanged="TbFilter_OnTextChanged" x:Name="tbFilter" HorizontalAlignment="Left" Height="23" Margin="169,47,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="283"/>
 

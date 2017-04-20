@@ -10,6 +10,7 @@
     <Viewbox VerticalAlignment="Top" Stretch="Uniform">
         
         <Grid Background="Azure" Margin="0,0,0,0">
+            <Image x:Name="image" Source="Images/db.jpeg"  HorizontalAlignment="Left" Height="370" VerticalAlignment="Top" Width="538" Margin="10,92,0,0"/>
 
             <Button x:Name="btLoad" Content="Load " Click="buttonLoad_Click" HorizontalAlignment="Left" Margin="10,14,0,0" VerticalAlignment="Top" Width="75"/>
             <Button x:Name="button1" Content="Print" HorizontalAlignment="Left" Margin="103,14,0,0" VerticalAlignment="Top" Width="75"/>
@@ -17,10 +18,11 @@
             <Button x:Name="button3" Content="Add " HorizontalAlignment="Left" Margin="288,14,0,0" VerticalAlignment="Top" Width="75"/>
             <Button x:Name="button4" Content="Order " HorizontalAlignment="Left" Margin="377,14,0,0" VerticalAlignment="Top" Width="75"/>
             <Button x:Name="button5" Content="Update" HorizontalAlignment="Left" Margin="467,14,0,0" VerticalAlignment="Top" Width="75"/>
-            <ListView Name="lvProductList" Margin="0,80,10,38"  >
+            <ListView Name="lvProductList" Opacity="0.9" Margin="0,88,10,30"  >
            
                 <ListView.View>
                     <GridView>
+                        
                         <GridViewColumn Header="ID" Width="30" DisplayMemberBinding="{Binding ProductId}" />
                         <GridViewColumn Header="SCU" Width="80" DisplayMemberBinding="{Binding SCU}" />
                         <GridViewColumn Header="Name" Width="100" DisplayMemberBinding="{Binding ProductName}" />
@@ -32,7 +34,6 @@
                     </GridView>
                 </ListView.View>
             </ListView>
-            <Image x:Name="image" Source="Images/db.jpeg" Opacity="0.1" HorizontalAlignment="Left" Height="370" VerticalAlignment="Top" Width="538" Margin="10,62,0,0"/>
             <Button x:Name="button6" Content="Add to Order" HorizontalAlignment="Left" Margin="10,440,0,0" VerticalAlignment="Top" Width="94"/>
             <Button x:Name="button7" Content="Delete from Order" HorizontalAlignment="Left" Margin="109,440,0,0" VerticalAlignment="Top" Width="121"/>
             <Button x:Name="button8" Content="Add Category" HorizontalAlignment="Left" Margin="338,440,0,0" VerticalAlignment="Top" Width="94" Height="22"/>
