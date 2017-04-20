@@ -24,7 +24,8 @@ namespace InventoryApp
     public partial class ManagerView : Window
     {
         Database db;
-       
+        int selectedProductIndex;
+
         public ManagerView()
         {
             try
@@ -77,5 +78,26 @@ namespace InventoryApp
             lvProductList.ItemsSource = db.GetAllProducts();
         }
 
+        private void btnEditSelectedProduct_Click(object sender, RoutedEventArgs e)
+        {
+            ModifyProduct mod = new ModifyProduct();
+            Product p = (Product)lvProductList.Items.GetItemAt(selectedProductIndex);
+            mod.lblProductIdEdit.Content = p.ProductId;
+            mod.tbProductNameEdit.Text = p.ProductName;
+            mod.tbCategoryEdit.Text = p.Category;
+            mod.tbDescriptionEdit.Text = p.Descrition;
+           // mod.Content.ToDecimal(this.tbPriceEdit.Text) = p.Price;
+          //  mod.Convert.tbSCUEdit.Text = p.SCU;
+          //  mod.tbQuantityEdit.Text = p.Quantity;
+            mod.tbLocationEdit.Text = p.Location;
+            mod.tbSupplierEdit.Text = p.SupplierName;
+            mod.Show();
+
+        }
+
+        private void lvProductList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            selectedProductIndex = lvProductList.SelectedIndex;
+        }
     }
 }

@@ -105,6 +105,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ModelAllTables.edmx</DependentUpon>
     </Compile>
+    <Compile Include="ModifyProduct.xaml.cs">
+      <DependentUpon>ModifyProduct.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Order.cs">
       <DependentUpon>AllTablesModel.tt</DependentUpon>
     </Compile>
@@ -167,6 +170,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="ModifyProduct.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="ModifyUser.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

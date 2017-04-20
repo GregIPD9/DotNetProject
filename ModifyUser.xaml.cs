@@ -23,7 +23,7 @@ namespace MainSIMS
     {
         AdminView win = new AdminView();
         InventoryDBEntities db;
-       // Database db;
+
         public ModifyUser()
         {
             InitializeComponent();
