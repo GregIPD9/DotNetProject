@@ -81,6 +81,8 @@ namespace InventoryApp
             }
             tbUser.Clear();
             passwBox.Clear();
+            ComboBoxRole.SelectedIndex = -1;
+
         }
      
         private void passwBox_PasswordChanged(object sender, RoutedEventArgs e)
