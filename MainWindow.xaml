@@ -11,7 +11,7 @@
 
             <Image x:Name="image1" Opacity="0.5" Source="Images\db1.png" HorizontalAlignment="Left" Height="234" Margin="344,226,0,0" VerticalAlignment="Top" Width="273"/>
             <Image x:Name="image" Opacity="0.7" Source="Images\brainsql.png" HorizontalAlignment="Left" Height="160" Margin="10,10,0,0" VerticalAlignment="Top" Width="148"/>
-            <TextBox x:Name="tbUser" Background="BlanchedAlmond" HorizontalAlignment="Left" Margin="163,175,0,0" VerticalAlignment="Top" Width="136" Height="24"/>
+            <TextBox x:Name="tbUser" Background="BlanchedAlmond" FontSize="16" FontWeight="Bold" HorizontalAlignment="Left" Margin="163,175,0,0" VerticalAlignment="Top" Width="136" Height="24"/>
             <Label x:Name="label" Content="Password:" HorizontalAlignment="Left" Margin="90,226,0,0" VerticalAlignment="Top" Height="42" Width="68"/>
             <PasswordBox x:Name="passwBox" BorderBrush="Aqua" Opacity="1" BorderThickness="1" Background="LightGray" MaxLength="12" PasswordChanged="passwBox_PasswordChanged" HorizontalAlignment="Left" Margin="163,226,0,0" VerticalAlignment="Top" Width="136" Height="24"/>
             <Label x:Name="label1" Content="User:" HorizontalAlignment="Left" Margin="90,175,0,0" VerticalAlignment="Top" Height="24" Width="68"/>

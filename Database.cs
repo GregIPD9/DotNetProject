@@ -11,6 +11,7 @@ namespace MainSIMS
     class Database
     {
         SqlConnection conn;
+        private string description;
 
         public Database()
         {
@@ -34,7 +35,8 @@ namespace MainSIMS
                     string location = (string)reader["Location"];
                     string category = (string)reader["Category"];
                     string supplierName = (string)reader["SupplierName"];
-                    Product p = new Product(id, scu, productName, price, quantity, location, category, supplierName);
+                    string descrition = (string)reader["Descrition"];
+                    Product p = new Product(id, scu, productName, price, quantity, location, category, supplierName, descrition);
                     result.Add(p);
                 }
             }

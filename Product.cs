@@ -14,9 +14,10 @@ namespace MainSIMS
     
     public partial class Product
     {
+       
       //  private int id;
 
-        public Product(int id, int scu, string productName, decimal price, int quantity, string location, string category, string supplierName)
+        public Product(int id, int scu, string productName, decimal price, int quantity, string location, string category, string supplierName, string descrition)
         {
             ProductId = id;
             SCU = scu;
@@ -26,6 +27,7 @@ namespace MainSIMS
             Location = location;
             Category = category;
             SupplierName = supplierName;
+            Descrition = descrition;
         }
 
         public Product()
