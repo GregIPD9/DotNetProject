@@ -130,5 +130,11 @@ namespace InventoryApp
             MessageBox.Show("You have been successfully signed out.", "Message", MessageBoxButton.OK, MessageBoxImage.Information);
             this.Close();
         }
+
+        private void btnViewPO_Click(object sender, RoutedEventArgs e)
+        {
+            ViewPO po = new ViewPO();
+            po.Show();
+        }
     }
 }

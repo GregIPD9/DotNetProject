@@ -8,13 +8,13 @@
         Title="ViewPO" Height="324.383" Width="432">
     <Grid Background="Azure" Height="311" VerticalAlignment="Top" Margin="0,0,0,-6">
 
-        <ListView Name="lvUsers" Margin="10,51,10,67" >
+        <ListView Name="lvOrdersList" Margin="10,51,10,67" >
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="Supplier" Width="90" DisplayMemberBinding="{Binding Supplier}" />
-                    <GridViewColumn Header="SCU" Width="80" DisplayMemberBinding="{Binding Scu}" />
-                    <GridViewColumn Header="Name" Width="110" DisplayMemberBinding="{Binding Name}" />
-                    <GridViewColumn Header="Price" Width="60" DisplayMemberBinding="{Binding Name}" />
+                    <GridViewColumn Header="Supplier" Width="90" DisplayMemberBinding="{Binding SupplierName}" />
+                    <GridViewColumn Header="SCU" Width="80" DisplayMemberBinding="{Binding SCU}" />
+                    <GridViewColumn Header="Name" Width="110" DisplayMemberBinding="{Binding ProductName}" />
+                    <GridViewColumn Header="Price" Width="60" DisplayMemberBinding="{Binding Price}" />
                     <GridViewColumn Header="Quantity" Width="60" DisplayMemberBinding="{Binding Quantity}" />
                 </GridView>
             </ListView.View>
@@ -22,11 +22,11 @@
         <Image x:Name="image" Source="Images/db.jpeg" Opacity="0.1" HorizontalAlignment="Left" Height="194" VerticalAlignment="Top" Width="361" Margin="53,65,0,0"/>
         <Label x:Name="label" Content="Total, $:" HorizontalAlignment="Left" Margin="79,261,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="149,264,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="button" Content="Place Order" HorizontalAlignment="Left" Margin="329,264,0,0" VerticalAlignment="Top" Width="85" Height="30" RenderTransformOrigin="1.176,0.867"/>
+        <Button x:Name="button" Content="Place Order" HorizontalAlignment="Left" Margin="321,264,0,0" VerticalAlignment="Top" Width="76" Height="23" RenderTransformOrigin="1.176,0.867"/>
         <Button x:Name="button1" Content="Export to PDF" HorizontalAlignment="Left" Margin="255,21,0,0" VerticalAlignment="Top" Width="86" Height="20"/>
         <Button x:Name="button2" Content="Print Order" HorizontalAlignment="Left" Margin="346,21,0,0" VerticalAlignment="Top" Width="68" Height="21"/>
         <Button x:Name="button3" Content="Add" HorizontalAlignment="Left" Margin="194,20,0,0" VerticalAlignment="Top" Width="56" Height="21"/>
         <Label x:Name="label1" Content="Product:" HorizontalAlignment="Left" Margin="10,16,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="23" Margin="69,18,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox TextChanged="TbFilter_OnTextChanged" x:Name="tbFilter" HorizontalAlignment="Left" Height="23" Margin="44,18,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
     </Grid>
 </Window>

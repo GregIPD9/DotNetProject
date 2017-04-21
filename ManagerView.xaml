@@ -37,7 +37,7 @@
             <Button x:Name="button6" Content="Add to Order" HorizontalAlignment="Left" Margin="10,440,0,0" VerticalAlignment="Top" Width="94" Height="33"/>
             <Button x:Name="button7" Content="Delete from Order" HorizontalAlignment="Left" Margin="109,440,0,0" VerticalAlignment="Top" Width="121" Height="33"/>
             <Button x:Name="btSignOut" Content="Sign Out" Click="buttonSignOut_Click" HorizontalAlignment="Left" Margin="467,440,0,0" VerticalAlignment="Top" Width="103" Height="33"/>
-            <Button x:Name="button9" Content="View PO" HorizontalAlignment="Left" Margin="235,440,0,0" VerticalAlignment="Top" Width="117" Height="33"/>
+            <Button x:Name="btnViewPO" Content="View PO" Click="btnViewPO_Click" HorizontalAlignment="Left" Margin="235,440,0,0" VerticalAlignment="Top" Width="117" Height="33"/>
             <Button x:Name="button10" Content="Reports" HorizontalAlignment="Left" Margin="357,440,0,0" VerticalAlignment="Top" Width="105" Height="33"/>
             <Label x:Name="label" Content="Search product:" HorizontalAlignment="Left" Margin="64,44,0,0" VerticalAlignment="Top" Width="100"/>
             <TextBox TextChanged="TbFilter_OnTextChanged" x:Name="tbFilter" HorizontalAlignment="Left" Height="23" Margin="169,47,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="283"/>
