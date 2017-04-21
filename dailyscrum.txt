@@ -1,6 +1,30 @@
 InventoryApp 
 Teammembers: Andrei Sinkevich and Gregory Torakis
 
+--- April 21.5 Andrei
+DID SINCE LAST SCRUM:
+1. 
+2. 
+WILL DO IN THE NEXT 48 HOURS
+1. TO FIX- Descrition "Description"(migrate entities)
+2. Assign Entity Relations FKs
+3. Fix Database and Update Entity Frameworks
+WHERE I NEED HELP IS...
+1. Migrate Entities (from DB first)
+2. Triggers and Store Procedures
+
+--- April 21.5 Gregory
+DID SINCE LAST SCRUM:
+1. Search Product Filter to all Views
+WILL DO IN THE NEXT 48 HOURS
+1. Implement Print
+2. Login label (userName and userId)
+WHERE I NEED HELP IS...
+1. Printing Reports/Charts
+2. Filter search int
+
+============================================
+
 --- April 21 Andrei
 DID SINCE LAST SCRUM:
 1. ManagerView edit product (TODO- parse decimal/int)
