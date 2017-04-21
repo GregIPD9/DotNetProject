@@ -28,7 +28,7 @@
             <ComboBoxItem Content="Employee" HorizontalAlignment="Left" Width="118"/>
             <ComboBoxItem Content="Supplier" HorizontalAlignment="Left" Width="118"/>
         </ComboBox>
-        <Button x:Name="btnSaveChanges" Click="btnSaveChanges_Click" Content="Save changes" HorizontalAlignment="Left" Margin="106,201,0,0" VerticalAlignment="Top" Width="95" Height="28"/>
+        <Button x:Name="btnSaveChanges" Click="btnSaveChanges_Click" Content="Save changes" HorizontalAlignment="Left" Margin="119,195,0,0" VerticalAlignment="Top" Width="120" Height="28"/>
         <Label Content="UserId:" HorizontalAlignment="Left" Margin="42,21,0,0" VerticalAlignment="Top" Height="26" Width="52"/>
         <Label x:Name="lblUserId" Content="..." HorizontalAlignment="Left" Margin="119,21,0,0" VerticalAlignment="Top" Width="82"/>
 

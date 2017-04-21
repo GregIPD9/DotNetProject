@@ -4,6 +4,7 @@
              xmlns:local="clr-namespace:MainSIMS"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <ResourceDictionary Source="AppStyle.xaml"></ResourceDictionary>
     </Application.Resources>
+
 </Application>

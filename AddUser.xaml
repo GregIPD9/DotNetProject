@@ -5,11 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MainSIMS"
         mc:Ignorable="d"
-        Title="AddUser" Height="300" Width="300">
+        Title="AddUser" Height="272.83" Width="253.585">
     <Grid Background="Azure">
         <Label x:Name="label" Content="User:" HorizontalAlignment="Left" Margin="32,57,0,0" VerticalAlignment="Top"/>
         <Label x:Name="label_Copy" Content="Password:" HorizontalAlignment="Left" Margin="32,98,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label_Copy1" Content="Privilege:" HorizontalAlignment="Left" Margin="32,140,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label_Copy1" Content="Role:" HorizontalAlignment="Left" Margin="32,140,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="tbUserNameUser" HorizontalAlignment="Left" Height="23" Margin="119,60,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="tbPasswordUser" HorizontalAlignment="Left" Height="23" Margin="119,101,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <ComboBox x:Name="comboBoxRoleUser" HorizontalAlignment="Left" Margin="119,144,0,0" VerticalAlignment="Top" Width="120">
@@ -18,7 +18,7 @@
             <ComboBoxItem Content="Employee" HorizontalAlignment="Left" Width="118"/>
             <ComboBoxItem Content="Supplier" HorizontalAlignment="Left" Width="118"/>
         </ComboBox>
-        <Button x:Name="btnSaveUser" Content="Save user" Click="btnSaveUser_Click" HorizontalAlignment="Left" Margin="106,201,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="btnSaveUser" Content="Save user" Click="btnSaveUser_Click" HorizontalAlignment="Left" Margin="119,195,0,0" VerticalAlignment="Top" Width="120" Height="26"/>
 
     </Grid>
 </Window>

@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MainSIMS"
         mc:Ignorable="d"
-        Title="AddProduct" Height="395.865" Width="375.564">
-    <Grid>
+        Title="AddProduct" Height="364.865" Width="279.564">
+    <Grid Background="Azure">
         <Grid.ColumnDefinitions>
         </Grid.ColumnDefinitions>
         <Label x:Name="label" Content="Name:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="94"/>
@@ -25,7 +25,7 @@
         <TextBox x:Name="tbQuantity" HorizontalAlignment="Left" Height="23" Margin="127,168,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="tbLocation" HorizontalAlignment="Left" Height="23" Margin="127,199,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="tbSupplier" HorizontalAlignment="Left" Height="23" Margin="127,230,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="btnAddProductToInventory" Click="btnAddProductToInventory_Click" Content="Add product to Inventory" HorizontalAlignment="Left" Margin="88,281,0,0" VerticalAlignment="Top" Width="175" Height="33"/>
+        <Button x:Name="btnAddProductToInventory" Click="btnAddProductToInventory_Click" Content="Add product" HorizontalAlignment="Left" Margin="127,281,0,0" VerticalAlignment="Top" Width="120" Height="33"/>
 
     </Grid>
 </Window>

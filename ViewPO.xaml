@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MainSIMS"
         mc:Ignorable="d"
-        Title="ViewPO" Height="356.383" Width="432">
-    <Grid Background="Azure">
+        Title="ViewPO" Height="324.383" Width="432">
+    <Grid Background="Azure" Height="311" VerticalAlignment="Top" Margin="0,0,0,-6">
 
         <ListView Name="lvUsers" Margin="10,51,10,67" >
             <ListView.View>
@@ -19,13 +19,13 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <Image x:Name="image" Source="Images/db.jpeg" Opacity="0.1" HorizontalAlignment="Left" Height="300" VerticalAlignment="Top" Width="475" Margin="-15,16,-36,0"/>
-        <Label x:Name="label" Content="Total, $:" HorizontalAlignment="Left" Margin="48,278,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="104,278,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="button" Content="Place Order" HorizontalAlignment="Left" Margin="290,278,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button x:Name="button1" Content="Export to PDF" HorizontalAlignment="Left" Margin="255,16,0,0" VerticalAlignment="Top" Width="86"/>
-        <Button x:Name="button2" Content="Print Order" HorizontalAlignment="Left" Margin="346,16,0,0" VerticalAlignment="Top" Width="68"/>
-        <Button x:Name="button3" Content="Add" HorizontalAlignment="Left" Margin="199,16,0,0" VerticalAlignment="Top" Width="51"/>
+        <Image x:Name="image" Source="Images/db.jpeg" Opacity="0.1" HorizontalAlignment="Left" Height="194" VerticalAlignment="Top" Width="361" Margin="53,65,0,0"/>
+        <Label x:Name="label" Content="Total, $:" HorizontalAlignment="Left" Margin="79,261,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="149,264,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="button" Content="Place Order" HorizontalAlignment="Left" Margin="329,264,0,0" VerticalAlignment="Top" Width="85" Height="30" RenderTransformOrigin="1.176,0.867"/>
+        <Button x:Name="button1" Content="Export to PDF" HorizontalAlignment="Left" Margin="255,21,0,0" VerticalAlignment="Top" Width="86" Height="20"/>
+        <Button x:Name="button2" Content="Print Order" HorizontalAlignment="Left" Margin="346,21,0,0" VerticalAlignment="Top" Width="68" Height="21"/>
+        <Button x:Name="button3" Content="Add" HorizontalAlignment="Left" Margin="194,20,0,0" VerticalAlignment="Top" Width="56" Height="21"/>
         <Label x:Name="label1" Content="Product:" HorizontalAlignment="Left" Margin="10,16,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="23" Margin="69,18,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
     </Grid>
