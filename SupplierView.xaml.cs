@@ -46,8 +46,6 @@ namespace InventoryApp
 
         private void TbFilter_OnTextChanged(object sender, TextChangedEventArgs e)
         {
-
-            {
                 string filter = tbFilter.Text.ToLower();
                 if (filter == "")
                 {
@@ -69,8 +67,7 @@ namespace InventoryApp
                                                select p;
 
                             lvProductList.ItemsSource = filteredList;
-                 }
-              }
+                 }              
           }
         
 
