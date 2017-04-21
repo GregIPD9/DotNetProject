@@ -1,6 +1,30 @@
 InventoryApp 
 Teammembers: Andrei Sinkevich and Gregory Torakis
 
+--- April 21 Andrei
+DID SINCE LAST SCRUM:
+1. ManagerView edit product (TODO- parse decimal/int)
+2. Implement EmployeeView add/delete/edit product (TO FIX- Descrition "Description"(migrate entities)
+3. Finalized UI Styling
+WILL DO IN THE NEXT 24 HOURS
+1. TO FIX- Descrition "Description"(migrate entities)
+2. Assign Entity Relations FKs
+WHERE I NEED HELP IS...
+1. Migrate Entities (from DB first)
+
+--- April 21 Gregory
+DID SINCE LAST SCRUM:
+1. Add Sign out to ManagerView/EmployeeView/AdminView
+2. Impliment Search product filter(SupplierView) 
+WILL DO IN THE NEXT 24 HOURS
+1. Search Product Filter (Ints)
+2. Login label (userName and userId)
+WHERE I NEED HELP IS...
+1. Printing Reports/Charts
+2. Filter search int
+
+============================================
+
 --- April 20 Andrei
 DID SINCE LAST SCRUM:
 1. added AdminView (modify user)
