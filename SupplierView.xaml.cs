@@ -2,9 +2,11 @@
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.IO;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Documents;
 
 namespace InventoryApp
 {
@@ -67,6 +69,21 @@ namespace InventoryApp
         {
             MessageBox.Show("You have been successfully signed out.", "Message", MessageBoxButton.OK, MessageBoxImage.Information);
             this.Close();
+        }
+
+        private void btPrint_Click(object sender, RoutedEventArgs e)
+        {
+            PrintDialog printDialog = new PrintDialog();
+
+            if (printDialog.ShowDialog() == true)
+            {
+               printDialog.PrintVisual(lvProductList, "Print List");
+            }
+        }
+
+        private void btPreview_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
