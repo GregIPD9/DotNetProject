@@ -1,6 +1,27 @@
 InventoryApp 
 Teammembers: Andrei Sinkevich and Gregory Torakis
 
+--- April 24 Andrei
+DID SINCE LAST SCRUM:
+1. TO FIX- Descrition "Description"(migrate entities)
+2. Assign Entity Relations FKs
+3. Fix Database and Update Entity Frameworks 
+WILL DO IN THE NEXT 24 HOURS
+1. Add Stored Procedure
+WHERE I NEED HELP IS...
+1. Need example of 1 Stored Procedure
+
+--- April 24 Gregory
+DID SINCE LAST SCRUM:
+1. Worked on Print function
+WILL DO IN THE NEXT 24 HOURS
+1. Implement Print
+2. Login label (userName and userId)
+WHERE I NEED HELP IS...
+1. Printing Reports
+
+============================================
+
 --- April 21.5 Andrei
 DID SINCE LAST SCRUM:
 1. 
