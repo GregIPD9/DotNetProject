@@ -7,9 +7,9 @@
         mc:Ignorable="d"  WindowStartupLocation="CenterScreen"
         Title="AddUser" Height="272.83" Width="253.585">
     <Grid Background="Azure">
-        <Label x:Name="label" Content="User:" HorizontalAlignment="Left" Margin="32,57,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label_Copy" Content="Password:" HorizontalAlignment="Left" Margin="32,98,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label_Copy1" Content="Role:" HorizontalAlignment="Left" Margin="32,140,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label" Content="EmployeeName:" HorizontalAlignment="Left" Margin="18,57,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label_Copy" Content="Password:" HorizontalAlignment="Left" Margin="18,98,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label_Copy1" Content="Role:" HorizontalAlignment="Left" Margin="18,140,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="tbUserNameUser" HorizontalAlignment="Left" Height="23" Margin="119,60,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="tbPasswordUser" HorizontalAlignment="Left" Height="23" Margin="119,101,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <ComboBox x:Name="comboBoxRoleUser" HorizontalAlignment="Left" Margin="119,144,0,0" VerticalAlignment="Top" Width="120">

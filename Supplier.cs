@@ -14,10 +14,18 @@ namespace MainSIMS
     
     public partial class Supplier
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Supplier()
+        {
+            this.Orders = new HashSet<Order>();
+        }
+    
         public int SupplierId { get; set; }
         public string SupplierName { get; set; }
         public string Address { get; set; }
-        public string ContactInfo { get; set; }
-        public string LeadTime { get; set; }
+        public string Phone { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Order> Orders { get; set; }
     }
 }

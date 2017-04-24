@@ -15,12 +15,19 @@ namespace MainSIMS
     public partial class Order
     {
         public int OrderId { get; set; }
-        public string SupplierID { get; set; }
-        public int EmployeeID { get; set; }
-        public int ProductID { get; set; }
+        public int SupplierId { get; set; }
+        public string SupplierName { get; set; }
+        public int ProductId { get; set; }
+        public string ProductName { get; set; }
+        public string Quantity { get; set; }
+        public decimal Price { get; set; }
         public System.DateTime OrderDate { get; set; }
-        public System.DateTime DueDate { get; set; }
-        public int Quantity { get; set; }
+        public decimal PriceTotal { get; set; }
+        public int EmployeeId { get; set; }
         public string Notes { get; set; }
+    
+        public virtual Product Product { get; set; }
+        public virtual Supplier Supplier { get; set; }
+        public virtual User User { get; set; }
     }
 }

@@ -14,22 +14,18 @@ namespace MainSIMS
     
     public partial class User
     {
-       // private int id;
-  
-        public User(int id, string userName, string password, string role)
-        {
-            // TODO: Complete member initialization
-            UserId = id;
-            Username = userName;
-            Password = password;
-            Role = role;
-        }
-
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public User()
-        { }
-        public int UserId { get; set; }
-        public string Username { get; set; }
+        {
+            this.Orders = new HashSet<Order>();
+        }
+    
+        public int EmployeeId { get; set; }
+        public string EmployeeName { get; set; }
         public string Password { get; set; }
         public string Role { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Order> Orders { get; set; }
     }
 }

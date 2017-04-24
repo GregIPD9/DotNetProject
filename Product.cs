@@ -14,32 +14,24 @@ namespace MainSIMS
     
     public partial class Product
     {
-       
-      //  private int id;
-
-        public Product(int id, int scu, string productName, decimal price, int quantity, string location, string category, string supplierName, string descrition)
-        {
-            ProductId = id;
-            SCU = scu;
-            ProductName = productName;
-            Price = price;
-            Quantity = quantity;
-            Location = location;
-            Category = category;
-            SupplierName = supplierName;
-            Descrition = descrition;
-        }
-
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Product()
-        { }
+        {
+            this.Orders = new HashSet<Order>();
+        }
+    
         public int ProductId { get; set; }
         public string ProductName { get; set; }
         public string Category { get; set; }
-        public string Descrition { get; set; }
+        public string Description { get; set; }
         public decimal Price { get; set; }
         public Nullable<int> SCU { get; set; }
         public int Quantity { get; set; }
         public string Location { get; set; }
         public string SupplierName { get; set; }
+    
+        public virtual Category Category1 { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Order> Orders { get; set; }
     }
 }

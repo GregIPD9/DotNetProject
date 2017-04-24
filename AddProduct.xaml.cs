@@ -1,16 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace MainSIMS
 {
@@ -19,12 +8,12 @@ namespace MainSIMS
     /// </summary>
     public partial class AddProduct : Window
     {
-        InventoryDBEntities db;
+        InventoryDBEntitiesFK db;
 
         public AddProduct()
         {
             InitializeComponent();
-            db = new InventoryDBEntities();
+            db = new InventoryDBEntitiesFK();
         }
 
         private void btnAddProductToInventory_Click(object sender, RoutedEventArgs e)
@@ -32,7 +21,7 @@ namespace MainSIMS
             Product product1 = new Product();
             product1.ProductName = tbProductName.Text;
             product1.Category = tbCategory.Text;
-            product1.Descrition = tbDescription.Text;
+            product1.Description = tbDescription.Text;
             product1.Price = Convert.ToDecimal(this.tbPrice.Text);
             product1.SCU = Convert.ToInt32(this.tbSCU.Text);
             product1.Quantity = Convert.ToInt32(this.tbQuantity.Text);

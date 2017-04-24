@@ -1,26 +1,15 @@
 ﻿using MainSIMS;
 using System;
 using System.Collections.Generic;
-using System.Configuration;
 using System.Data;
-using System.Data.Entity.Core.Objects;
 using System.Data.SqlClient;
 using System.Linq;
-using System.Runtime.Remoting.Messaging;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace InventoryApp
 {
-   
+
     public partial class ManagerView : Window
     {
         Database db;
@@ -83,7 +72,7 @@ namespace InventoryApp
         {
             try
             {
-                using (InventoryDBEntities ctx = new InventoryDBEntities())
+                using (InventoryDBEntitiesFK ctx = new InventoryDBEntitiesFK())
                 {
                     Product selected = (Product)lvProductList.SelectedItem;
                     Product p = ctx.Products.Find(Convert.ToInt32(selected.ProductId));
@@ -110,7 +99,7 @@ namespace InventoryApp
             mod.lblProductIdEdit.Content = p.ProductId;
             mod.tbProductNameEdit.Text = p.ProductName;
             mod.tbCategoryEdit.Text = p.Category;
-            mod.tbDescriptionEdit.Text = p.Descrition;
+            mod.tbDescriptionEdit.Text = p.Description;
             mod.tbPriceEdit.Text = p.Price.ToString();
             mod.tbSCUEdit.Text = p.SCU.ToString();
             mod.tbQuantityEdit.Text = p.Quantity.ToString();

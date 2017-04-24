@@ -1,17 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
-using MainSIMS;
 
 
 namespace MainSIMS
@@ -22,13 +10,13 @@ namespace MainSIMS
     public partial class ModifyUser : Window
     {
         AdminView win = new AdminView();
-        InventoryDBEntities db;
+        InventoryDBEntitiesFK db;
 
         public ModifyUser()
         {
             InitializeComponent();
           //  db = new Database();
-            db = new InventoryDBEntities();
+            db = new InventoryDBEntitiesFK();
             
             
         }
@@ -38,10 +26,10 @@ namespace MainSIMS
            
             try
             {
-                using (InventoryDBEntities ctx = new InventoryDBEntities())
+                using (InventoryDBEntitiesFK ctx = new InventoryDBEntitiesFK())
                 {
                     User u = ctx.Users.Find(Convert.ToInt32(lblUserId.Content));
-                    u.Username = tbUserNameInModify.Text;
+                    u.EmployeeName = tbUserNameInModify.Text;
                     u.Password = tbPasswordInmodify.Text;
                     u.Role = comboBoxRoleInModify.Text;
                     ctx.SaveChanges();
@@ -54,33 +42,6 @@ namespace MainSIMS
             {
                 MessageBox.Show(ex.Message);
             }
-           
-            
-            /*
-
-            User u = new User();
-            u.UserId = Convert.ToInt32(lblUserId.Content);
-            u.Username = tbUserNameInModify.Text;
-            u.Password = tbPasswordInmodify.Text;
-            u.Role = comboBoxRoleInModify.Text;
-            try
-            {
-                using (InventoryDBEntities ctx = new InventoryDBEntities())
-                { 
-                ctx.Users.Attach(u); 
-                ctx.Users.Remove(u); 
-                ctx.SaveChanges();
-         }
-            //    db.UpdateUser(u);
-                //db.SaveChanges();
-              //  this.Close();
-                
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            */
         }  
     } 
 }

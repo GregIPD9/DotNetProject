@@ -57,10 +57,10 @@ namespace MainSIMS
             // lvUsersList.Items.RemoveAt(lvUsersList.Items.IndexOf(lvUsersList.SelectedItem));
             try
             {
-                using (InventoryDBEntities ctx = new InventoryDBEntities())
+                using (InventoryDBEntitiesFK ctx = new InventoryDBEntitiesFK())
                 {
                     User selected = (User) lvUsersList.SelectedItem;
-                    User u = ctx.Users.Find(Convert.ToInt32(selected.UserId));
+                    User u = ctx.Users.Find(Convert.ToInt32(selected.EmployeeId));
                     ctx.Users.Remove(u);
                     ctx.SaveChanges();
                 }
@@ -76,8 +76,8 @@ namespace MainSIMS
         {
             ModifyUser win = new ModifyUser();
             User u =(User) lvUsersList.Items.GetItemAt(selectedItemIndex);
-            win.lblUserId.Content = u.UserId;
-            win.tbUserNameInModify.Text = u.Username;
+            win.lblUserId.Content = u.EmployeeId;
+            win.tbUserNameInModify.Text = u.EmployeeName;
             win.tbPasswordInmodify.Text = u.Password;
             win.comboBoxRoleInModify.Text = u.Role;
             win.Show();

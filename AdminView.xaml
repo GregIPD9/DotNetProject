@@ -15,8 +15,8 @@
         		Opacity="0.9" Margin="29,53,29,31" >
                 <ListView.View>
                     <GridView>
-                        <GridViewColumn Header="UserId" Width="70" DisplayMemberBinding="{Binding UserId}" />
-                        <GridViewColumn Header="Username" Width="100" DisplayMemberBinding="{Binding Username}" />
+                        <GridViewColumn Header="EmployeeId" Width="70" DisplayMemberBinding="{Binding EmployeeId}" />
+                        <GridViewColumn Header="EmployeeName" Width="100" DisplayMemberBinding="{Binding EmployeeName}" />
                         <GridViewColumn Header="Password" Width="110" DisplayMemberBinding="{Binding Password}" />
                         <GridViewColumn Header="Role" Width="110" DisplayMemberBinding="{Binding Role}" />
                     </GridView>

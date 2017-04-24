@@ -7,8 +7,8 @@
         mc:Ignorable="d"  WindowStartupLocation="CenterScreen"
         Title="ModifyUser" Height="300" Width="300">
     <Grid Background="Azure">
-        
-        <Label x:Name="label" Content="Username:" HorizontalAlignment="Left" Margin="32,57,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5">
+
+        <Label x:Name="label" Content="EmployeeName" HorizontalAlignment="Left" Margin="16,57,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5">
             <Label.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -18,8 +18,8 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
-        <Label x:Name="label_Copy" Content="Password:" HorizontalAlignment="Left" Margin="32,98,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label_Copy1" Content="Role:" HorizontalAlignment="Left" Margin="32,140,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label_Copy" Content="Password:" HorizontalAlignment="Left" Margin="16,98,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.715,0.151"/>
+        <Label x:Name="label_Copy1" Content="Role:" HorizontalAlignment="Left" Margin="16,140,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="tbUserNameInModify" HorizontalAlignment="Left" Height="23" Margin="119,60,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="tbPasswordInmodify" HorizontalAlignment="Left" Height="23" Margin="119,101,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <ComboBox x:Name="comboBoxRoleInModify" HorizontalAlignment="Left" Margin="119,144,0,0" VerticalAlignment="Top" Width="120">
@@ -29,7 +29,7 @@
             <ComboBoxItem Content="Supplier" HorizontalAlignment="Left" Width="118"/>
         </ComboBox>
         <Button x:Name="btnSaveChanges" Click="btnSaveChanges_Click" Content="Save changes" HorizontalAlignment="Left" Margin="119,195,0,0" VerticalAlignment="Top" Width="120" Height="28"/>
-        <Label Content="UserId:" HorizontalAlignment="Left" Margin="42,21,0,0" VerticalAlignment="Top" Height="26" Width="52"/>
+        <Label Content="EmployeeId:" HorizontalAlignment="Left" Margin="16,21,0,0" VerticalAlignment="Top" Height="26" Width="98"/>
         <Label x:Name="lblUserId" Content="..." HorizontalAlignment="Left" Margin="119,21,0,0" VerticalAlignment="Top" Width="82"/>
 
     </Grid>

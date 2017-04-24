@@ -1,17 +1,6 @@
 ﻿using InventoryApp;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace MainSIMS
 {
@@ -21,12 +10,12 @@ namespace MainSIMS
     public partial class ModifyProduct : Window
     {
         ManagerView man = new ManagerView();
-        InventoryDBEntities db;
+        InventoryDBEntitiesFK db;
 
         public ModifyProduct()
         {
             InitializeComponent();
-            db = new InventoryDBEntities();
+            db = new InventoryDBEntitiesFK();
 
         }
 
@@ -34,12 +23,12 @@ namespace MainSIMS
         {
             try
             {
-                using (InventoryDBEntities ctx = new InventoryDBEntities())
+                using (InventoryDBEntitiesFK ctx = new InventoryDBEntitiesFK())
                 {
                     Product p = ctx.Products.Find(Convert.ToInt32(lblProductIdEdit.Content));
                     p.ProductName = tbProductNameEdit.Text;
                     p.Category = tbCategoryEdit.Text;
-                    p.Descrition = tbDescriptionEdit.Text;
+                    p.Description = tbDescriptionEdit.Text;
                     p.Price = Convert.ToDecimal(this.tbPriceEdit.Text);
                     p.SCU = Convert.ToInt32(this.tbSCUEdit.Text);
                     p.Quantity = Convert.ToInt32(this.tbQuantityEdit.Text);

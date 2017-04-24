@@ -19,12 +19,12 @@ namespace MainSIMS
     /// </summary>
     public partial class AddUser : Window
     {
-        InventoryDBEntities db;
+        InventoryDBEntitiesFK db;
 
         public AddUser()
         {
             InitializeComponent();
-            db = new InventoryDBEntities();
+            db = new InventoryDBEntitiesFK();
             // missing something
 
         }
@@ -32,7 +32,7 @@ namespace MainSIMS
         private void btnSaveUser_Click(object sender, RoutedEventArgs e)
         {
             User user1 = new User();
-            user1.Username = tbUserNameUser.Text;
+            user1.EmployeeName = tbUserNameUser.Text;
             user1.Password = tbPasswordUser.Text;
             user1.Role = comboBoxRoleUser.Text;
             try

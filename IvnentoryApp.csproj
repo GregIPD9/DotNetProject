@@ -70,61 +70,45 @@
     <Compile Include="AddProduct.xaml.cs">
       <DependentUpon>AddProduct.xaml</DependentUpon>
     </Compile>
-    <Compile Include="AllTablesModel.cs">
-      <DependentUpon>AllTablesModel.tt</DependentUpon>
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-    </Compile>
-    <Compile Include="AllTablesModel.Designer.cs">
-      <DependentUpon>AllTablesModel.edmx</DependentUpon>
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-    </Compile>
     <Compile Include="Category.cs">
-      <DependentUpon>AllTablesModel.tt</DependentUpon>
+      <DependentUpon>ModelAllTablesWithForeignKeys.tt</DependentUpon>
     </Compile>
     <Compile Include="Database.cs" />
     <Compile Include="EmployeeView.xaml.cs">
       <DependentUpon>EmployeeView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Location.cs">
-      <DependentUpon>AllTablesModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ModelAllTables.Context.cs">
+    <Compile Include="ModelAllTablesWithForeignKeys.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ModelAllTables.Context.tt</DependentUpon>
+      <DependentUpon>ModelAllTablesWithForeignKeys.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="ModelAllTables.cs">
+    <Compile Include="ModelAllTablesWithForeignKeys.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ModelAllTables.tt</DependentUpon>
+      <DependentUpon>ModelAllTablesWithForeignKeys.tt</DependentUpon>
     </Compile>
-    <Compile Include="ModelAllTables.Designer.cs">
+    <Compile Include="ModelAllTablesWithForeignKeys.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ModelAllTables.edmx</DependentUpon>
+      <DependentUpon>ModelAllTablesWithForeignKeys.edmx</DependentUpon>
     </Compile>
     <Compile Include="ModifyProduct.xaml.cs">
       <DependentUpon>ModifyProduct.xaml</DependentUpon>
     </Compile>
     <Compile Include="Order.cs">
-      <DependentUpon>AllTablesModel.tt</DependentUpon>
+      <DependentUpon>ModelAllTablesWithForeignKeys.tt</DependentUpon>
     </Compile>
     <Compile Include="Product.cs">
-      <DependentUpon>AllTablesModel.tt</DependentUpon>
+      <DependentUpon>ModelAllTablesWithForeignKeys.tt</DependentUpon>
     </Compile>
     <Compile Include="Supplier.cs">
-      <DependentUpon>AllTablesModel.tt</DependentUpon>
+      <DependentUpon>ModelAllTablesWithForeignKeys.tt</DependentUpon>
     </Compile>
     <Compile Include="SupplierView.xaml.cs">
       <DependentUpon>SupplierView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Test1.xaml.cs">
-      <DependentUpon>Test1.xaml</DependentUpon>
-    </Compile>
     <Compile Include="User.cs">
-      <DependentUpon>AllTablesModel.tt</DependentUpon>
+      <DependentUpon>ModelAllTablesWithForeignKeys.tt</DependentUpon>
     </Compile>
     <Compile Include="ViewPO.xaml.cs">
       <DependentUpon>ViewPO.xaml</DependentUpon>
@@ -186,10 +170,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Test1.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="ViewPO.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -216,16 +196,12 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EntityDeploy Include="AllTablesModel.edmx">
+    <EntityDeploy Include="ModelAllTablesWithForeignKeys.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>AllTablesModel.Designer.cs</LastGenOutput>
+      <LastGenOutput>ModelAllTablesWithForeignKeys.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <EntityDeploy Include="ModelAllTables.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>ModelAllTables.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="ModelAllTables.edmx.diagram">
-      <DependentUpon>ModelAllTables.edmx</DependentUpon>
+    <None Include="ModelAllTablesWithForeignKeys.edmx.diagram">
+      <DependentUpon>ModelAllTablesWithForeignKeys.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -235,7 +211,9 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\brainsql.png" />
@@ -259,20 +237,15 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="AllTablesModel.tt">
-      <DependentUpon>AllTablesModel.edmx</DependentUpon>
+    <Content Include="ModelAllTablesWithForeignKeys.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>AllTablesModel.cs</LastGenOutput>
+      <DependentUpon>ModelAllTablesWithForeignKeys.edmx</DependentUpon>
+      <LastGenOutput>ModelAllTablesWithForeignKeys.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="ModelAllTables.Context.tt">
+    <Content Include="ModelAllTablesWithForeignKeys.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ModelAllTables.edmx</DependentUpon>
-      <LastGenOutput>ModelAllTables.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="ModelAllTables.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ModelAllTables.edmx</DependentUpon>
-      <LastGenOutput>ModelAllTables.cs</LastGenOutput>
+      <DependentUpon>ModelAllTablesWithForeignKeys.edmx</DependentUpon>
+      <LastGenOutput>ModelAllTablesWithForeignKeys.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

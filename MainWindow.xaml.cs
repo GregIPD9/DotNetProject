@@ -38,10 +38,10 @@ namespace InventoryApp
             }
             try
             {
-               using (InventoryDBEntities login = new InventoryDBEntities())
+               using (InventoryDBEntitiesFK login = new InventoryDBEntitiesFK())
                 {
                     var query = from user in login.Users
-                                where user.Username == tbUser.Text && user.Password == passwBox.Password && user.Role == ComboBoxRole.Text                           
+                                where user.EmployeeName == tbUser.Text && user.Password == passwBox.Password && user.Role == ComboBoxRole.Text                           
                                 select user;
 
                     if (query.SingleOrDefault() != null)
