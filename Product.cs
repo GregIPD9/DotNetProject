@@ -19,6 +19,20 @@ namespace MainSIMS
         {
             this.Orders = new HashSet<Order>();
         }
+
+        public Product(int id, string productName, string category, string description, decimal price, int scu, int quantity, string location, string supplierName)
+        {
+            // TODO: Complete member initialization
+            ProductId = id;
+            ProductName = productName;
+            Category = category;
+            Description = description;
+            Price = price;
+            SCU = scu;
+            Quantity = quantity;
+            Location = location;
+            SupplierName = supplierName;
+        }
     
         public int ProductId { get; set; }
         public string ProductName { get; set; }

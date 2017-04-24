@@ -14,10 +14,20 @@ namespace MainSIMS
     
     public partial class User
     {
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public User()
         {
             this.Orders = new HashSet<Order>();
+        }
+
+        public User(int id, string employeeName, string password, string role)
+        {
+            // TODO: Complete member initialization
+            EmployeeId = id;
+            this.EmployeeName = employeeName;
+            this.Password = password;
+            this.Role = role;
         }
     
         public int EmployeeId { get; set; }
