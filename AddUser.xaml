@@ -18,7 +18,8 @@
             <ComboBoxItem Content="Employee" HorizontalAlignment="Left" Width="118"/>
             <ComboBoxItem Content="Supplier" HorizontalAlignment="Left" Width="118"/>
         </ComboBox>
-        <Button x:Name="btnSaveUser" Content="Save user" Click="btnSaveUser_Click" HorizontalAlignment="Left" Margin="119,195,0,0" VerticalAlignment="Top" Width="120" Height="26"/>
+        <Button x:Name="btnSaveUser" Content="Save user" Click="btnSaveUser_Click" HorizontalAlignment="Left" Margin="26,193,0,0" VerticalAlignment="Top" Width="101" Height="26"/>
+        <Button x:Name="btnCancel" Content="Cancel" Click="btnCancel_Click" HorizontalAlignment="Left" Margin="132,193,0,0" VerticalAlignment="Top" Width="105" Height="26"/>
 
     </Grid>
 </Window>
