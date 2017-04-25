@@ -42,6 +42,19 @@
           <Property Name="Location" Type="nchar" MaxLength="10" Nullable="false" />
           <Property Name="SupplierName" Type="nvarchar" MaxLength="50" Nullable="false" />
         </EntityType>
+        <EntityType Name="Products_Audit">
+          <Key>
+            <PropertyRef Name="ProductChangesLogId" />
+          </Key>
+          <Property Name="ProductChangesLogId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ProductId" Type="int" Nullable="false" />
+          <Property Name="ProductName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Price" Type="money" Nullable="false" />
+          <Property Name="Quantity" Type="int" Nullable="false" />
+          <Property Name="Location" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="Audit_Action" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="Audit_Timestamp" Type="datetime" Nullable="false" />
+        </EntityType>
         <EntityType Name="Suppliers">
           <Key>
             <PropertyRef Name="SupplierId" />
@@ -62,14 +75,15 @@
         </EntityType>
         <EntityType Name="Users_Audit">
           <Key>
-            <PropertyRef Name="EmployeeId" />
+            <PropertyRef Name="ChangesLogId" />
           </Key>
+          <Property Name="ChangesLogId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="EmployeeId" Type="int" Nullable="false" />
           <Property Name="EmployeeName" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Password" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Role" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Audit_Action" Type="nvarchar" MaxLength="200" Nullable="false" />
-          <Property Name="Audit_Timestamp " Type="datetime" Nullable="false" />
+          <Property Name="Audit_Timestamp" Type="datetime" Nullable="false" />
         </EntityType>
         <Association Name="FK_Orders_Products">
           <End Role="Products" Type="Self.Products" Multiplicity="1">
@@ -114,9 +128,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Products_Categories">
-          <End Role="Categories" Type="Self.Categories" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
+          <End Role="Categories" Type="Self.Categories" Multiplicity="1" />
           <End Role="Products" Type="Self.Products" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Categories">
@@ -142,6 +154,7 @@
           <EntitySet Name="Categories" EntityType="Self.Categories" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Orders" EntityType="Self.Orders" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Products" EntityType="Self.Products" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Products_Audit" EntityType="Self.Products_Audit" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Suppliers" EntityType="Self.Suppliers" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Users_Audit" EntityType="Self.Users_Audit" Schema="dbo" store:Type="Tables" />
@@ -319,17 +332,32 @@
             <Parameter Name="Password" Mode="In" Type="String" />
             <Parameter Name="Role" Mode="In" Type="String" />
           </FunctionImport>
+          <EntitySet Name="Products_Audit" EntityType="InventoryDBModel.Products_Audit" />
         </EntityContainer>
         <EntityType Name="Users_Audit">
           <Key>
-            <PropertyRef Name="EmployeeId" />
+            <PropertyRef Name="ChangesLogId" />
           </Key>
           <Property Name="EmployeeId" Type="Int32" Nullable="false" />
           <Property Name="EmployeeName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Password" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Role" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Audit_Action" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="Audit_Timestamp_" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ChangesLogId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Audit_Timestamp" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="Products_Audit">
+          <Key>
+            <PropertyRef Name="ProductChangesLogId" />
+          </Key>
+          <Property Name="ProductChangesLogId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ProductId" Type="Int32" Nullable="false" />
+          <Property Name="ProductName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Price" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+          <Property Name="Quantity" Type="Int32" Nullable="false" />
+          <Property Name="Location" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="Audit_Action" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Audit_Timestamp" Type="DateTime" Nullable="false" Precision="3" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -400,7 +428,8 @@
           <EntitySetMapping Name="Users_Audit">
             <EntityTypeMapping TypeName="InventoryDBModel.Users_Audit">
               <MappingFragment StoreEntitySet="Users_Audit">
-                <ScalarProperty Name="Audit_Timestamp_" ColumnName="Audit_Timestamp " />
+                <ScalarProperty Name="Audit_Timestamp" ColumnName="Audit_Timestamp" />
+                <ScalarProperty Name="ChangesLogId" ColumnName="ChangesLogId" />
                 <ScalarProperty Name="Audit_Action" ColumnName="Audit_Action" />
                 <ScalarProperty Name="Role" ColumnName="Role" />
                 <ScalarProperty Name="Password" ColumnName="Password" />
@@ -411,6 +440,20 @@
           </EntitySetMapping>
           <FunctionImportMapping FunctionImportName="insertNewUser" FunctionName="InventoryDBModel.Store.insertNewUser" />
           <FunctionImportMapping FunctionImportName="updateExistingUser" FunctionName="InventoryDBModel.Store.updateExistingUser" />
+          <EntitySetMapping Name="Products_Audit">
+            <EntityTypeMapping TypeName="InventoryDBModel.Products_Audit">
+              <MappingFragment StoreEntitySet="Products_Audit">
+                <ScalarProperty Name="Audit_Timestamp" ColumnName="Audit_Timestamp" />
+                <ScalarProperty Name="Audit_Action" ColumnName="Audit_Action" />
+                <ScalarProperty Name="Location" ColumnName="Location" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+                <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+                <ScalarProperty Name="ProductChangesLogId" ColumnName="ProductChangesLogId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

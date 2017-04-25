@@ -33,6 +33,7 @@ namespace MainSIMS
         public virtual DbSet<Supplier> Suppliers { get; set; }
         public virtual DbSet<User> Users { get; set; }
         public virtual DbSet<Users_Audit> Users_Audit { get; set; }
+        public virtual DbSet<Products_Audit> Products_Audit { get; set; }
     
         public virtual int insertNewUser(string employeeName, string password, string role)
         {

@@ -29,7 +29,7 @@ namespace MainSIMS
             {
                 db = new Database();
                 InitializeComponent();
-                //refreshUsersList();
+               // refreshUsersList();
             }
             catch (SqlException e)
             {
@@ -48,13 +48,11 @@ namespace MainSIMS
         {
             AddUser win = new AddUser();
             win.ShowDialog();
-            // lvUsersList.UpdateLayout();
             lvUsersList.ItemsSource = db.GetAllUsers();
         }
 
         private void btnDeleteUser_Click(object sender, RoutedEventArgs e)
         {
-            // lvUsersList.Items.RemoveAt(lvUsersList.Items.IndexOf(lvUsersList.SelectedItem));
             try
             {
                 using (InventoryDBEntitiesFK ctx = new InventoryDBEntitiesFK())
@@ -80,7 +78,8 @@ namespace MainSIMS
             win.tbUserNameInModify.Text = u.EmployeeName;
             win.tbPasswordInmodify.Text = u.Password;
             win.comboBoxRoleInModify.Text = u.Role;
-            win.Show();
+            win.ShowDialog();
+            lvUsersList.ItemsSource = db.GetAllUsers();
         }
 
         private void lvUsersList_SelectionChanged(object sender, SelectionChangedEventArgs e)

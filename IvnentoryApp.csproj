@@ -101,6 +101,9 @@
     <Compile Include="Product.cs">
       <DependentUpon>ModelAllTablesWithForeignKeys.tt</DependentUpon>
     </Compile>
+    <Compile Include="Products_Audit.cs">
+      <DependentUpon>ModelAllTablesWithForeignKeys.tt</DependentUpon>
+    </Compile>
     <Compile Include="Supplier.cs">
       <DependentUpon>ModelAllTablesWithForeignKeys.tt</DependentUpon>
     </Compile>

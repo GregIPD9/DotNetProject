@@ -9,21 +9,17 @@ namespace MainSIMS
     /// </summary>
     public partial class ModifyUser : Window
     {
-        AdminView win = new AdminView();
+       // AdminView win = new AdminView();
         InventoryDBEntitiesFK db;
 
         public ModifyUser()
         {
             InitializeComponent();
-          //  db = new Database();
             db = new InventoryDBEntitiesFK();
-            
-            
         }
 
         private void btnSaveChanges_Click(object sender, RoutedEventArgs e)
-        {
-           
+        {   
             try
             {
                 using (InventoryDBEntitiesFK ctx = new InventoryDBEntitiesFK())
@@ -33,8 +29,10 @@ namespace MainSIMS
                     u.Password = tbPasswordInmodify.Text;
                     u.Role = comboBoxRoleInModify.Text;
                     ctx.SaveChanges();
+                    MessageBox.Show("Cogradulations!!! Record has been modified");
+                  //  win.refreshUsersList();
                     this.Close();
-                    win.refreshUsersList();
+
                 }
                
             }
@@ -42,6 +40,6 @@ namespace MainSIMS
             {
                 MessageBox.Show(ex.Message);
             }
-        }  
-    } 
+        }
+    }
 }

@@ -1,16 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
+﻿using System.Windows;
 
 namespace MainSIMS
 {
@@ -25,8 +13,7 @@ namespace MainSIMS
         {
             InitializeComponent();
             db = new InventoryDBEntitiesFK();
-            // missing something
-
+          
         }
         private void btnSaveUser_Click(object sender, RoutedEventArgs e)
         {
@@ -38,6 +25,7 @@ namespace MainSIMS
             MessageBox.Show("Cogradulations!!! Record inserted");  
 
             /*   OLD WAY without Stored Procedure
+               
             User user1 = new User();
             user1.EmployeeName = tbUserNameUser.Text;
             user1.Password = tbPasswordUser.Text;
