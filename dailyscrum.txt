@@ -1,6 +1,25 @@
 InventoryApp 
 Teammembers: Andrei Sinkevich and Gregory Torakis
 
+--- April 25 Andrei
+DID SINCE LAST SCRUM:
+1. Added AfterTriggers INSERT/DELETE/UPDATE
+WILL DO IN THE NEXT 24 HOURS
+1. Add BeforeTriggers INSERT/DELETE/UPDATE
+WHERE I NEED HELP IS...
+1. Need example of 1 Stored Procedure
+
+--- April 25 Gregory
+DID SINCE LAST SCRUM:
+1. Worked on Print function
+WILL DO IN THE NEXT 24 HOURS
+1. Implement Print
+2. Login label (userName and userId)
+WHERE I NEED HELP IS...
+1. Printing PDF
+
+============================================
+
 --- April 24 Andrei
 DID SINCE LAST SCRUM:
 1. TO FIX- Descrition "Description"(migrate entities)
