@@ -42,7 +42,7 @@ namespace MainSIMS
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Order> Orders { get; set; }
-       
+
         internal void insertUser()
         {
             using (SqlConnection con = new SqlConnection(@"Data Source=andrei-greg.database.windows.net;Initial Catalog=InventoryDB;Persist Security Info=True;User ID=DBadmin;Password=JohnIsGreat2000"))
@@ -79,4 +79,3 @@ namespace MainSIMS
         }
     }
 }
-

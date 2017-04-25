@@ -110,6 +110,9 @@
     <Compile Include="User.cs">
       <DependentUpon>ModelAllTablesWithForeignKeys.tt</DependentUpon>
     </Compile>
+    <Compile Include="Users_Audit.cs">
+      <DependentUpon>ModelAllTablesWithForeignKeys.tt</DependentUpon>
+    </Compile>
     <Compile Include="ViewPO.xaml.cs">
       <DependentUpon>ViewPO.xaml</DependentUpon>
     </Compile>

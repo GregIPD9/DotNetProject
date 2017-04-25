@@ -12,6 +12,8 @@ namespace MainSIMS
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
+    using System.Data.Entity.Core.Objects;
+    using System.Linq;
     
     public partial class InventoryDBEntitiesFK : DbContext
     {
@@ -30,5 +32,44 @@ namespace MainSIMS
         public virtual DbSet<Product> Products { get; set; }
         public virtual DbSet<Supplier> Suppliers { get; set; }
         public virtual DbSet<User> Users { get; set; }
+        public virtual DbSet<Users_Audit> Users_Audit { get; set; }
+    
+        public virtual int insertNewUser(string employeeName, string password, string role)
+        {
+            var employeeNameParameter = employeeName != null ?
+                new ObjectParameter("EmployeeName", employeeName) :
+                new ObjectParameter("EmployeeName", typeof(string));
+    
+            var passwordParameter = password != null ?
+                new ObjectParameter("Password", password) :
+                new ObjectParameter("Password", typeof(string));
+    
+            var roleParameter = role != null ?
+                new ObjectParameter("Role", role) :
+                new ObjectParameter("Role", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("insertNewUser", employeeNameParameter, passwordParameter, roleParameter);
+        }
+    
+        public virtual int updateExistingUser(Nullable<int> emloyeeId, string employeeName, string password, string role)
+        {
+            var emloyeeIdParameter = emloyeeId.HasValue ?
+                new ObjectParameter("EmloyeeId", emloyeeId) :
+                new ObjectParameter("EmloyeeId", typeof(int));
+    
+            var employeeNameParameter = employeeName != null ?
+                new ObjectParameter("EmployeeName", employeeName) :
+                new ObjectParameter("EmployeeName", typeof(string));
+    
+            var passwordParameter = password != null ?
+                new ObjectParameter("Password", password) :
+                new ObjectParameter("Password", typeof(string));
+    
+            var roleParameter = role != null ?
+                new ObjectParameter("Role", role) :
+                new ObjectParameter("Role", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("updateExistingUser", emloyeeIdParameter, employeeNameParameter, passwordParameter, roleParameter);
+        }
     }
 }
