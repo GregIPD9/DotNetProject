@@ -11,10 +11,7 @@ namespace MainSIMS
 {
     using System;
     using System.Collections.Generic;
-    using System.Configuration;
     using System.Data;
-    using System.Data.Common;
-    using System.Data.Entity.Core.EntityClient;
     using System.Data.SqlClient;
     using System.Windows;
 

@@ -144,12 +144,6 @@
           <Parameter Name="Password" Type="varchar" Mode="In" />
           <Parameter Name="Role" Type="varchar" Mode="In" />
         </Function>
-        <Function Name="updateExistingUser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="EmloyeeId" Type="int" Mode="In" />
-          <Parameter Name="EmployeeName" Type="varchar" Mode="In" />
-          <Parameter Name="Password" Type="varchar" Mode="In" />
-          <Parameter Name="Role" Type="varchar" Mode="In" />
-        </Function>
         <EntityContainer Name="InventoryDBModelStoreContainer">
           <EntitySet Name="Categories" EntityType="Self.Categories" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Orders" EntityType="Self.Orders" Schema="dbo" store:Type="Tables" />
@@ -439,7 +433,6 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <FunctionImportMapping FunctionImportName="insertNewUser" FunctionName="InventoryDBModel.Store.insertNewUser" />
-          <FunctionImportMapping FunctionImportName="updateExistingUser" FunctionName="InventoryDBModel.Store.updateExistingUser" />
           <EntitySetMapping Name="Products_Audit">
             <EntityTypeMapping TypeName="InventoryDBModel.Products_Audit">
               <MappingFragment StoreEntitySet="Products_Audit">
