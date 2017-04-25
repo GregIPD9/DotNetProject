@@ -5,30 +5,42 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MainSIMS"
         mc:Ignorable="d"  WindowStartupLocation="CenterScreen"
-        Title="ViewPO" Height="385.983" Width="448">
+        Title="ViewPO" Height="385.983" Width="782.6">
     <Grid Background="Azure" Height="361" VerticalAlignment="Top" Margin="0,0,-0.4,-3.4">
 
-        <ListView Name="lvOrdersList" Margin="10,51,10,67" >
+        <ListView Name="lvOrdersList" Margin="10,51,423.4,67" >
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="Supplier" Width="90" DisplayMemberBinding="{Binding SupplierName}" />
-                    <GridViewColumn Header="SCU" Width="80" DisplayMemberBinding="{Binding SCU}" />
-                    <GridViewColumn Header="Name" Width="110" DisplayMemberBinding="{Binding ProductName}" />
-                    <GridViewColumn Header="Price" Width="60" DisplayMemberBinding="{Binding Price}" />
-                    <GridViewColumn Header="Quantity" Width="60" DisplayMemberBinding="{Binding Quantity}" />
+                    <GridViewColumn Header="Supplier" Width="80" DisplayMemberBinding="{Binding SupplierName}" />
+                    <GridViewColumn Header="SCU" Width="60" DisplayMemberBinding="{Binding SCU}" />
+                    <GridViewColumn Header="Product Name" Width="100" DisplayMemberBinding="{Binding ProductName}" />
+                    <GridViewColumn Header="Price" Width="50" DisplayMemberBinding="{Binding Price}" />
+                    <GridViewColumn Header="Quantity" Width="50" DisplayMemberBinding="{Binding Quantity}" />
                 </GridView>
             </ListView.View>
         </ListView>
-        <Image x:Name="image" Source="Images/db.jpeg" Opacity="0.1" HorizontalAlignment="Left" Height="230" VerticalAlignment="Top" Width="349" Margin="42,64,0,0"/>
+        <Image x:Name="image" Source="Images/db.jpeg" Opacity="0.1" HorizontalAlignment="Left" Height="230" VerticalAlignment="Top" Width="343" Margin="10,64,0,0"/>
         <Label x:Name="label" Content="Total, $:" HorizontalAlignment="Left" Margin="256,303,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="312,303,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="button" Content="Place Order" HorizontalAlignment="Left" Margin="356,331,0,0" VerticalAlignment="Top" Width="76" Height="23" RenderTransformOrigin="1.176,0.867"/>
-        <Button x:Name="button1" Content="Export to PDF" HorizontalAlignment="Left" Margin="42,333,0,0" VerticalAlignment="Top" Width="86" Height="20"/>
-        <Button x:Name="button2" Content="Print Order" HorizontalAlignment="Left" Margin="164,332,0,0" VerticalAlignment="Top" Width="86" Height="21"/>
-        <Button x:Name="btnAddToPO" Content="Add" HorizontalAlignment="Left" Margin="199,20,0,0" VerticalAlignment="Top" Width="65" Height="21"/>
-        <Label x:Name="label1" Content="Product:" HorizontalAlignment="Left" Margin="10,16,0,0" VerticalAlignment="Top"/>
-        <TextBox TextChanged="TbFilter_OnTextChanged" x:Name="tbFilter" HorizontalAlignment="Left" Height="23" Margin="64,18,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="btnEditProductInPO" Content="Edit" HorizontalAlignment="Left" Margin="279,21,0,0" VerticalAlignment="Top" Width="63" Height="21"/>
-        <Button x:Name="btnDeleteFromPO" Content="Delete" HorizontalAlignment="Left" Margin="356,21,0,0" VerticalAlignment="Top" Width="76" Height="21"/>
+        <Button x:Name="button" Content="Place Order" HorizontalAlignment="Left" Margin="312,331,0,0" VerticalAlignment="Top" Width="120" Height="23" RenderTransformOrigin="1.176,0.867"/>
+        <Button x:Name="button1" Content="Export to PDF" HorizontalAlignment="Left" Margin="598,332,0,0" VerticalAlignment="Top" Width="86" Height="20"/>
+        <Button x:Name="button2" Content="Print Order" HorizontalAlignment="Left" Margin="112,333,0,0" VerticalAlignment="Top" Width="86" Height="21"/>
+        <Button x:Name="btnAddToPO" Content="Add" HorizontalAlignment="Left" Margin="358,152,0,0" VerticalAlignment="Top" Width="43" Height="25" RenderTransformOrigin="0.744,-1.456"/>
+        <Label x:Name="label1" Content="SEARCH:" HorizontalAlignment="Left" Margin="10,16,0,0" VerticalAlignment="Top"/>
+        <TextBox TextChanged="TbFilter_OnTextChanged" x:Name="tbFilter" HorizontalAlignment="Left" Height="23" Margin="64,18,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="202"/>
+        <Button x:Name="btnEditProductInPO" Content="Edit" HorizontalAlignment="Left" Margin="539,21,0,0" VerticalAlignment="Top" Width="70" Height="21"/>
+        <Button x:Name="btnDeleteFromPO" Content="Delete" HorizontalAlignment="Left" Margin="614,21,0,0" VerticalAlignment="Top" Width="70" Height="21"/>
+        <ListView Name="lvRealOrderList" HorizontalAlignment="Left" Height="243" Margin="406,51,0,0" VerticalAlignment="Top" Width="360">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Supplier" Width="80" DisplayMemberBinding="{Binding SupplierName}" />
+                    <GridViewColumn Header="Product Name" Width="100" DisplayMemberBinding="{Binding ProductName}" />
+                    <GridViewColumn Header="Quantity" Width="60" DisplayMemberBinding="{Binding Quantity}" />
+                    <GridViewColumn Header="Price" Width="50" DisplayMemberBinding="{Binding Price}" />
+                    <GridViewColumn Header="Price Total" Width="70" DisplayMemberBinding="{Binding PriceTotal}" />
+                    <GridViewColumn/>
+                </GridView>
+            </ListView.View>
+        </ListView>
     </Grid>
 </Window>

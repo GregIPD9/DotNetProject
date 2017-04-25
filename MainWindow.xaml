@@ -7,18 +7,30 @@
         mc:Ignorable="d" WindowStartupLocation="CenterScreen"
         Title="MainWindow" Height="500" Width="625">
     <Viewbox VerticalAlignment="Top" Stretch="Uniform">
-        <Grid Background="Azure">
+        <Grid Background="Azure" Height="475" Width="621">
 
-            <Image x:Name="image1" Opacity="0.5" Source="Images\db1.png" HorizontalAlignment="Left" Height="234" Margin="344,226,0,0" VerticalAlignment="Top" Width="273"/>
-            <Image x:Name="image" Opacity="0.7" Source="Images\brainsql.png" HorizontalAlignment="Left" Height="160" Margin="10,10,0,0" VerticalAlignment="Top" Width="148"/>
-            <TextBox x:Name="tbUser" Background="BlanchedAlmond" FontSize="16" FontWeight="Bold" HorizontalAlignment="Left" Margin="163,175,0,0" VerticalAlignment="Top" Width="136" Height="24"/>
-            <Label x:Name="label" Content="Password:" HorizontalAlignment="Left" Margin="90,226,0,0" VerticalAlignment="Top" Height="42" Width="68"/>
-            <PasswordBox x:Name="passwBox" BorderBrush="Aqua" Opacity="1" BorderThickness="1" Background="LightGray" MaxLength="12" PasswordChanged="passwBox_PasswordChanged" HorizontalAlignment="Left" Margin="163,226,0,0" VerticalAlignment="Top" Width="136" Height="24"/>
-            <Label x:Name="label1" Content="Employee:" HorizontalAlignment="Left" Margin="90,175,0,0" VerticalAlignment="Top" Height="24" Width="68"/>
-            <Button x:Name="buttonLogIn" Background="BlanchedAlmond"  Content="Log in" HorizontalAlignment="Left" Margin="163,352,0,0" VerticalAlignment="Top" Width="136" Height="29" Click="buttonLogIn_Click"/>
-            <Image x:Name="image2" Source="Images\welcome1.png" HorizontalAlignment="Left" Height="63" Margin="344,10,-136,0" VerticalAlignment="Top" Width="409"/>
+            <Image x:Name="image1" Opacity="0.5" Source="Images\db1.png" HorizontalAlignment="Left" Height="281" Margin="321,194,0,0" VerticalAlignment="Top" Width="300"/>
+            <Image x:Name="image" Opacity="0.7" Source="Images\brainsql.png" HorizontalAlignment="Left" Height="170" VerticalAlignment="Top" Width="168"/>
+            <TextBox x:Name="tbUser" Background="BlanchedAlmond" FontSize="16" FontWeight="Bold" HorizontalAlignment="Left" Margin="163,175,0,0" VerticalAlignment="Top" Width="136" Height="24">
+                <TextBox.Effect>
+                    <DropShadowEffect BlurRadius="7" Color="#FFB6EFF5" ShadowDepth="10"/>
+                </TextBox.Effect>
+            </TextBox>
+            <Label x:Name="label" Content="PASSWORD:" HorizontalAlignment="Left" Margin="72,229,0,0" VerticalAlignment="Top" Height="42" Width="86" FontFamily="Orator Std" FontSize="14" FontWeight="Bold" FontStyle="Italic" Foreground="Teal"/>
+            <PasswordBox x:Name="passwBox" BorderBrush="Aqua" Opacity="1" BorderThickness="1" Background="LightGray" MaxLength="12" PasswordChanged="passwBox_PasswordChanged" HorizontalAlignment="Left" Margin="163,226,0,0" VerticalAlignment="Top" Width="136" Height="24">
+                <PasswordBox.Effect>
+                    <DropShadowEffect BlurRadius="7" Color="#FFB6EFF5" ShadowDepth="10"/>
+                </PasswordBox.Effect>
+            </PasswordBox>
+            <Label x:Name="label1" Content="EMPLOYEE:" HorizontalAlignment="Left" Margin="72,178,0,0" VerticalAlignment="Top" Height="24" Width="86" Cursor="None" FontFamily="Orator Std" FontSize="14" FontWeight="Bold" FontStyle="Italic" Foreground="Teal"/>
+            <Button x:Name="buttonLogIn" Background="BlanchedAlmond"  Content="Log in" HorizontalAlignment="Left" Margin="163,352,0,0" VerticalAlignment="Top" Width="136" Height="29" Click="buttonLogIn_Click" FontSize="16" FontStyle="Italic" Foreground="Teal" FontWeight="Bold">
+                <Button.Effect>
+                    <DropShadowEffect BlurRadius="7" Color="#FFB6EFF5" ShadowDepth="10"/>
+                </Button.Effect>
+            </Button>
+            <Image x:Name="image2" Source="Images\welcome1.png" HorizontalAlignment="Left" Height="63" Margin="192,10,0,0" VerticalAlignment="Top" Width="258"/>
             <Image x:Name="image3" Source="Images\inventory1.png" HorizontalAlignment="Left" Height="29" Margin="192,80,0,0" VerticalAlignment="Top" Width="151"/>
-            <Image x:Name="image4" Source="Images\management1.png" HorizontalAlignment="Left" Height="31" Margin="311,105,0,0" VerticalAlignment="Top" Width="279" RenderTransformOrigin="0.5,0.5">
+            <Image x:Name="image4" Source="Images\management1.png" HorizontalAlignment="Left" Height="31" Margin="311,105,0,0" VerticalAlignment="Top" Width="178" RenderTransformOrigin="0.5,0.5">
                 <Image.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -28,15 +40,18 @@
                     </TransformGroup>
                 </Image.RenderTransform>
             </Image>
-            <Image x:Name="image4_Copy" Source="Images/system1.png" HorizontalAlignment="Left" Height="31" Margin="458,139,-112,0" VerticalAlignment="Top" Width="271"/>
-            <Image x:Name="image5" Source="Images/ipd.gif" HorizontalAlignment="Left" Height="36" Margin="10,424,0,0" VerticalAlignment="Top" Width="100"/>
+            <Image x:Name="image4_Copy" Source="Images/system1.png" HorizontalAlignment="Left" Height="31" Margin="458,139,0,0" VerticalAlignment="Top" Width="118"/>
+            <Image x:Name="image5" Source="Images/ipd.gif" HorizontalAlignment="Left" Height="21" Margin="10,444,0,0" VerticalAlignment="Top" Width="198"/>
             <ComboBox x:Name="ComboBoxRole" HorizontalAlignment="Left" Margin="163,283,0,0" VerticalAlignment="Top" Width="136" ToolTip="Choose role" RenderTransformOrigin="0.522,2.5">
+                <ComboBox.Effect>
+                    <DropShadowEffect BlurRadius="7" Color="#FFB6EFF5" ShadowDepth="10"/>
+                </ComboBox.Effect>
                 <ComboBoxItem x:Name="ComboBoxAdmin" Content="Admin" HorizontalAlignment="Left" Width="134.4"/>
                 <ComboBoxItem x:Name="ComboBoxManager" Content="Manager" HorizontalAlignment="Left" Width="134.4"/>
                 <ComboBoxItem x:Name="ComboBoxEmployee" Content="Employee" HorizontalAlignment="Left" Width="134.4"/>
                 <ComboBoxItem x:Name="ComboBoxSupplier" Content="Supplier" HorizontalAlignment="Left" Width="134.4"/>
             </ComboBox>
-            <Label x:Name="label2" Content="Role:" HorizontalAlignment="Left" Margin="90,279,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="label2" Content="ROLE:" HorizontalAlignment="Left" Margin="101,283,0,0" VerticalAlignment="Top" FontFamily="Orator Std" FontSize="14" Width="57" FontWeight="Bold" FontStyle="Italic" Foreground="Teal"/>
         </Grid>
     </Viewbox>
 </Window>
