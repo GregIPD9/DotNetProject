@@ -11,7 +11,10 @@ namespace MainSIMS
     public partial class ViewPO : Window
     {
         Database db;
-        public ViewPO()
+        int selectedProductIndex;
+
+
+        public ViewPO()   
         {
             db = new Database();
             InitializeComponent();
@@ -41,5 +44,17 @@ namespace MainSIMS
                 lvOrdersList.ItemsSource = filteredList;
             }
         }
+
+        private void lvOrdersList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            selectedProductIndex = lvOrdersList.SelectedIndex;
+        }
+
+        private void btnAddToOrder_Click(object sender, RoutedEventArgs e)
+        {
+            selectedProductIndex = lvRealOrderList.SelectedIndex;
+        }
+
+       
     }
 }
