@@ -19,7 +19,7 @@ namespace MainSIMS
             {
                 db = new Database();
                 InitializeComponent();
-
+                lblLoggedInAs.Content = "Id: " + Globals.currentUser.EmployeeId + "  Name: " + Globals.currentUser.EmployeeName;
             }
             catch (SqlException e)
             {
@@ -28,7 +28,6 @@ namespace MainSIMS
                 Environment.Exit(1);
             }
         }
-
         private void btloadProducts_Click(object sender, RoutedEventArgs e)
         {
             lvProductList.ItemsSource = db.GetAllProducts();                            

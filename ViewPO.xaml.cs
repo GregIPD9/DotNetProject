@@ -12,12 +12,15 @@ namespace MainSIMS
     {
         Database db;
         int selectedProductIndex;
+        List<Product> newOrder = new List<Product>();
+        List<Product> list = new List<Product>();
 
 
         public ViewPO()   
         {
             db = new Database();
             InitializeComponent();
+            lvNewOrderList.ItemsSource = newOrder;
         }
         private void TbFilter_OnTextChanged(object sender, TextChangedEventArgs e)
         {
@@ -28,7 +31,7 @@ namespace MainSIMS
             }
             else
             {
-                List<Product> list = db.GetAllProducts();
+                list = db.GetAllProducts();
 
                 var filteredList = from p in list
                                    where p.ProductName.ToLower().Contains(filter) ||
@@ -40,21 +43,26 @@ namespace MainSIMS
                                          p.Quantity.ToString().Contains(filter) ||
                                          p.SCU.ToString().Contains(filter)
                                    select p;
-
                 lvOrdersList.ItemsSource = filteredList;
             }
         }
-
         private void lvOrdersList_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             selectedProductIndex = lvOrdersList.SelectedIndex;
         }
 
         private void btnAddToOrder_Click(object sender, RoutedEventArgs e)
-        {
-            selectedProductIndex = lvRealOrderList.SelectedIndex;
-        }
-
+        {     
+            decimal priceQty=0;
+            newOrder.Add(list.ElementAt(selectedProductIndex));
+            lvNewOrderList.Items.Refresh();
+            foreach(Product p in newOrder){
+                priceQty+=p.Price*p.Quantity;
+            }
+            tbTotalCost.Text = priceQty.ToString("0.##");
+        }      
        
+        
+
     }
 }

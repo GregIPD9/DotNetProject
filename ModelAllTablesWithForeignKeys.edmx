@@ -5,13 +5,6 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="InventoryDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-        <EntityType Name="Categories">
-          <Key>
-            <PropertyRef Name="Category" />
-          </Key>
-          <Property Name="Category" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="Notes" Type="nvarchar" MaxLength="200" />
-        </EntityType>
         <EntityType Name="Orders">
           <Key>
             <PropertyRef Name="OrderId" />
@@ -127,25 +120,12 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Products_Categories">
-          <End Role="Categories" Type="Self.Categories" Multiplicity="1" />
-          <End Role="Products" Type="Self.Products" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Categories">
-              <PropertyRef Name="Category" />
-            </Principal>
-            <Dependent Role="Products">
-              <PropertyRef Name="Category" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Function Name="insertNewUser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="EmployeeName" Type="varchar" Mode="In" />
           <Parameter Name="Password" Type="varchar" Mode="In" />
           <Parameter Name="Role" Type="varchar" Mode="In" />
         </Function>
         <EntityContainer Name="InventoryDBModelStoreContainer">
-          <EntitySet Name="Categories" EntityType="Self.Categories" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Orders" EntityType="Self.Orders" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Products" EntityType="Self.Products" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Products_Audit" EntityType="Self.Products_Audit" Schema="dbo" store:Type="Tables" />
@@ -164,23 +144,11 @@
             <End Role="Users" EntitySet="Users" />
             <End Role="Orders" EntitySet="Orders" />
           </AssociationSet>
-          <AssociationSet Name="FK_Products_Categories" Association="Self.FK_Products_Categories">
-            <End Role="Categories" EntitySet="Categories" />
-            <End Role="Products" EntitySet="Products" />
-          </AssociationSet>
         </EntityContainer>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="InventoryDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityType Name="Category">
-          <Key>
-            <PropertyRef Name="Category1" />
-          </Key>
-          <Property Name="Category1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Notes" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="Products" Relationship="Self.FK_Products_Categories" FromRole="Categories" ToRole="Products" />
-        </EntityType>
         <EntityType Name="Order">
           <Key>
             <PropertyRef Name="OrderId" />
@@ -213,7 +181,6 @@
           <Property Name="Quantity" Type="Int32" Nullable="false" />
           <Property Name="Location" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
           <Property Name="SupplierName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <NavigationProperty Name="Category1" Relationship="Self.FK_Products_Categories" FromRole="Products" ToRole="Categories" />
           <NavigationProperty Name="Orders" Relationship="Self.FK_Orders_Products" FromRole="Products" ToRole="Orders" />
         </EntityType>
         <EntityType Name="Supplier">
@@ -236,20 +203,6 @@
           <Property Name="Role" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <NavigationProperty Name="Orders" Relationship="Self.FK_Orders_Users" FromRole="Users" ToRole="Orders" />
         </EntityType>
-        <Association Name="FK_Products_Categories">
-          <End Role="Categories" Type="Self.Category" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Role="Products" Type="Self.Product" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Categories">
-              <PropertyRef Name="Category1" />
-            </Principal>
-            <Dependent Role="Products">
-              <PropertyRef Name="Category" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_Orders_Products">
           <End Role="Products" Type="Self.Product" Multiplicity="1">
             <OnDelete Action="Cascade" />
@@ -293,15 +246,10 @@
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="InventoryDBEntitiesFK" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="Categories" EntityType="Self.Category" />
           <EntitySet Name="Orders" EntityType="Self.Order" />
           <EntitySet Name="Products" EntityType="Self.Product" />
           <EntitySet Name="Suppliers" EntityType="Self.Supplier" />
           <EntitySet Name="Users" EntityType="Self.User" />
-          <AssociationSet Name="FK_Products_Categories" Association="Self.FK_Products_Categories">
-            <End Role="Categories" EntitySet="Categories" />
-            <End Role="Products" EntitySet="Products" />
-          </AssociationSet>
           <AssociationSet Name="FK_Orders_Products" Association="Self.FK_Orders_Products">
             <End Role="Products" EntitySet="Products" />
             <End Role="Orders" EntitySet="Orders" />
@@ -359,14 +307,6 @@
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="InventoryDBModelStoreContainer" CdmEntityContainer="InventoryDBEntitiesFK">
-          <EntitySetMapping Name="Categories">
-            <EntityTypeMapping TypeName="InventoryDBModel.Category">
-              <MappingFragment StoreEntitySet="Categories">
-                <ScalarProperty Name="Category1" ColumnName="Category" />
-                <ScalarProperty Name="Notes" ColumnName="Notes" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="Orders">
             <EntityTypeMapping TypeName="InventoryDBModel.Order">
               <MappingFragment StoreEntitySet="Orders">

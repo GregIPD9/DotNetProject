@@ -15,16 +15,16 @@
             <ListView x:Name="lvOrdersList" SelectionChanged="lvOrdersList_SelectionChanged" Opacity="0.9" Margin="10,51,421,82" >
                 <ListView.View>
                     <GridView>
-                        <GridViewColumn Header="Supplier" Width="80" DisplayMemberBinding="{Binding SupplierName}" />
+                        <GridViewColumn Header="Supplier" Width="85" DisplayMemberBinding="{Binding SupplierName}" />
                         <GridViewColumn Header="SCU" Width="60" DisplayMemberBinding="{Binding SCU}" />
                         <GridViewColumn Header="Product Name" Width="100" DisplayMemberBinding="{Binding ProductName}" />
                         <GridViewColumn Header="Price" Width="40" DisplayMemberBinding="{Binding Price}" />
-                        <GridViewColumn Header="Quantity" Width="50" DisplayMemberBinding="{Binding Quantity}" />
+                        <GridViewColumn Header="Quantity" Width="55" DisplayMemberBinding="{Binding Quantity}" />
                     </GridView>
                 </ListView.View>
             </ListView>
             <Label x:Name="label" Content="Total, $:" HorizontalAlignment="Left" Margin="256,303,0,0" VerticalAlignment="Top"/>
-            <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="312,303,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+            <TextBox x:Name="tbTotalCost" HorizontalAlignment="Left" Height="23" Margin="312,303,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
             <Button x:Name="button" Content="Place Order" HorizontalAlignment="Left" Margin="312,331,0,0" VerticalAlignment="Top" Width="120" Height="23" RenderTransformOrigin="1.176,0.867"/>
             <Button x:Name="button1" Content="Export to PDF" HorizontalAlignment="Left" Margin="598,332,0,0" VerticalAlignment="Top" Width="86" Height="20"/>
             <Button x:Name="button2" Content="Print Order" HorizontalAlignment="Left" Margin="112,333,0,0" VerticalAlignment="Top" Width="86" Height="21"/>
@@ -33,15 +33,14 @@
             <TextBox TextChanged="TbFilter_OnTextChanged" x:Name="tbFilter" HorizontalAlignment="Left" Height="23" Margin="64,18,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="202"/>
             <Button x:Name="btnEditProductInPO" Content="Edit" HorizontalAlignment="Left" Margin="539,21,0,0" VerticalAlignment="Top" Width="70" Height="21"/>
             <Button x:Name="btnDeleteFromPO" Content="Delete" HorizontalAlignment="Left" Margin="614,21,0,0" VerticalAlignment="Top" Width="70" Height="21"/>
-            <ListView x:Name="lvRealOrderList" HorizontalAlignment="Left" Height="243" Margin="416,51,0,0" VerticalAlignment="Top" Width="350">
+            <ListView x:Name="lvNewOrderList" HorizontalAlignment="Left" Height="243" Margin="416,51,0,0" VerticalAlignment="Top" Width="350">
                 <ListView.View>
                     <GridView>
-                        <GridViewColumn Header="Supplier" Width="80" DisplayMemberBinding="{Binding SupplierName}" />
+                        <GridViewColumn Header="Supplier" Width="90" DisplayMemberBinding="{Binding SupplierName}" />
+                        <GridViewColumn Header="SCU" Width="60" DisplayMemberBinding="{Binding SCU}" />
                         <GridViewColumn Header="Product Name" Width="100" DisplayMemberBinding="{Binding ProductName}" />
-                        <GridViewColumn Header="Quantity" Width="60" DisplayMemberBinding="{Binding Quantity}" />
                         <GridViewColumn Header="Price" Width="40" DisplayMemberBinding="{Binding Price}" />
-                        <GridViewColumn Header="Price Total" Width="70" DisplayMemberBinding="{Binding PriceTotal}" />
-                        <GridViewColumn/>
+                        <GridViewColumn Header="Quantity" Width="60" DisplayMemberBinding="{Binding Quantity}" />      
                     </GridView>
                 </ListView.View>
             </ListView>

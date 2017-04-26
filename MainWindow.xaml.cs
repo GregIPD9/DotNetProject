@@ -56,7 +56,7 @@ namespace InventoryApp
                         }
                         // Just for testing purpose, I'll keep this message here for now
                         MessageBox.Show("You have been successfully logged in.", "Message", MessageBoxButton.OK, MessageBoxImage.Information);
-
+                        Globals.currentUser = (User)query.SingleOrDefault();
                     }
                     else
                     {
@@ -71,7 +71,6 @@ namespace InventoryApp
             tbUser.Clear();
             passwBox.Clear();
             ComboBoxRole.SelectedIndex = -1;
-
         }
      
         private void passwBox_PasswordChanged(object sender, RoutedEventArgs e)

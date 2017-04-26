@@ -45,7 +45,6 @@ namespace MainSIMS
         public string Location { get; set; }
         public string SupplierName { get; set; }
 
-        public virtual Category Category1 { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Order> Orders { get; set; }
     }

@@ -31,7 +31,7 @@
             <Label x:Name="label" Content="Search product:" HorizontalAlignment="Left" Margin="10,44,0,0" VerticalAlignment="Top" Width="100"/>
             <TextBox TextChanged="TbFilter_OnTextChanged" x:Name="tbFilter" HorizontalAlignment="Left" Height="23" Margin="110,47,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="283"/>
             <Label Content="Logged in as:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="78"/>
-            <Label x:Name="LoggedInAs" Content="..." HorizontalAlignment="Left" Margin="93,10,0,0" VerticalAlignment="Top" Width="164"/>
+            <Label x:Name="lblLoggedInAs" Content="..." HorizontalAlignment="Left" Margin="93,10,0,0" VerticalAlignment="Top" Width="164"/>
             <Button x:Name="btloadProducts" Content="Load Products" Click="btloadProducts_Click" HorizontalAlignment="Left" Margin="462,41,0,0" VerticalAlignment="Top" Width="108" Height="27"/>
             <Button x:Name="btSignOut" Content="Sign Out" Click="buttonSignOut_Click" HorizontalAlignment="Left" Margin="462,452,0,0" VerticalAlignment="Top" Width="108" Height="33"/>
 

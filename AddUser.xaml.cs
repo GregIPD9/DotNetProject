@@ -17,6 +17,7 @@ namespace MainSIMS
         }
         private void btnSaveUser_Click(object sender, RoutedEventArgs e)
         {
+            //Using Stored Procedure
             User user1 = new User();
             user1.EmployeeName = tbUserNameUser.Text;
             user1.Password = tbPasswordUser.Text;

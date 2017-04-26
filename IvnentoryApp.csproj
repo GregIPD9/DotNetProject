@@ -70,13 +70,11 @@
     <Compile Include="AddProduct.xaml.cs">
       <DependentUpon>AddProduct.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Category.cs">
-      <DependentUpon>ModelAllTablesWithForeignKeys.tt</DependentUpon>
-    </Compile>
     <Compile Include="Database.cs" />
     <Compile Include="EmployeeView.xaml.cs">
       <DependentUpon>EmployeeView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Globals.cs" />
     <Compile Include="ModelAllTablesWithForeignKeys.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
