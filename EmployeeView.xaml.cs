@@ -60,8 +60,10 @@ namespace MainSIMS
 
         private void buttonSignOut_Click(object sender, RoutedEventArgs e)
         {
+            Globals.currentUser=null;
             MessageBox.Show("You have been successfully signed out.", "Message", MessageBoxButton.OK, MessageBoxImage.Information);
             this.Close();
+
         }
     }
 }
