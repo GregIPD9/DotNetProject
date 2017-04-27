@@ -64,9 +64,9 @@ namespace InventoryApp
                     }                 
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                MessageBox.Show("I messed up the code here!!! Please ask PROF to HELP!!!", "Message", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("I messed up the code here!!! Please ask PROF to HELP!!! " + ex.Message , "Message", MessageBoxButton.OK, MessageBoxImage.Error);
             }
             tbUser.Clear();
             passwBox.Clear();

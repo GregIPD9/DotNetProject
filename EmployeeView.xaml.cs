@@ -19,7 +19,7 @@ namespace MainSIMS
             {
                 db = new Database();
                 InitializeComponent();
-                lblLoggedInAs.Content = "Id: " + Globals.currentUser.EmployeeId + "  Name: " + Globals.currentUser.EmployeeName;
+                lblLoggedInAs.Content = "Name: " + Globals.currentUser.EmployeeName +  "  Role: " + Globals.currentUser.Role;
             }
             catch (SqlException e)
             {
@@ -59,11 +59,17 @@ namespace MainSIMS
         }
 
         private void buttonSignOut_Click(object sender, RoutedEventArgs e)
-        {
-            Globals.currentUser=null;
-            MessageBox.Show("You have been successfully signed out.", "Message", MessageBoxButton.OK, MessageBoxImage.Information);
+        {           
             this.Close();
+        }
 
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            Globals.currentUser.EmployeeName = null;
+            Globals.currentUser.Role = null;
+            Globals.currentUser.Password = null;
+            //Globals.currentUser = null;
+            MessageBox.Show("You have been successfully signed out.", "Message", MessageBoxButton.OK, MessageBoxImage.Information);
         }
     }
 }
