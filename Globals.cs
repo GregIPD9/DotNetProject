@@ -10,5 +10,6 @@ namespace MainSIMS
     {
         // User currently logged in, null otherwise
         public static User currentUser;
+
     }
 }

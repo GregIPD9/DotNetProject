@@ -19,7 +19,7 @@ namespace MainSIMS
             {
                 db = new Database();
                 InitializeComponent();
-                lblLoggedInAs.Content = "Name: " + Globals.currentUser.EmployeeName +  "  Role: " + Globals.currentUser.Role;
+                
             }
             catch (SqlException e)
             {
@@ -30,7 +30,8 @@ namespace MainSIMS
         }
         private void btloadProducts_Click(object sender, RoutedEventArgs e)
         {
-            lvProductList.ItemsSource = db.GetAllProducts();                            
+            lvProductList.ItemsSource = db.GetAllProducts();
+            lblLoggedInAs.Content = "Name: " + Globals.currentUser.EmployeeName + "  Role: " + Globals.currentUser.Role;               
         }
         private void TbFilter_OnTextChanged(object sender, TextChangedEventArgs e)
         {
@@ -55,6 +56,8 @@ namespace MainSIMS
                                    select p;
 
                 lvProductList.ItemsSource = filteredList;
+                lblLoggedInAs.Content = "Name: " + Globals.currentUser.EmployeeName + "  Role: " + Globals.currentUser.Role;               
+
             }
         }
 
