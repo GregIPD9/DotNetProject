@@ -1,6 +1,26 @@
 InventoryApp 
 Teammembers: Andrei Sinkevich and Gregory Torakis
 
+--- April 27 Andrei
+DID SINCE LAST SCRUM:
+1. Added AfterTriggers INSERT/DELETE/UPDATE
+WILL DO IN THE NEXT 24 HOURS
+1. Add BeforeTriggers INSERT/DELETE/UPDATE
+WHERE I NEED HELP IS...
+1. Need example of 1 Stored Procedure
+
+--- April 27 Gregory
+DID SINCE LAST SCRUM:
+1. Login label (userName and userRole)
+WILL DO IN THE NEXT 24 HOURS
+1. Login label (userName and userRole) on all Views
+2. Add Print to all Views
+3. Add Sign out with LoggedInAs clearing 
+WHERE I NEED HELP IS...
+1. Printing PDF
+
+============================================
+
 --- April 25 Andrei
 DID SINCE LAST SCRUM:
 1. Added AfterTriggers INSERT/DELETE/UPDATE
