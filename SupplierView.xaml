@@ -11,9 +11,10 @@
 
         <Grid Background="Azure" Margin="0,0,0,0" Height="451" Width="604">
             <Image x:Name="image" Source="Images/db.jpeg" HorizontalAlignment="Left" Height="303" VerticalAlignment="Top" Width="538" Margin="34,98,0,0"/>
-
-            <Button x:Name="button" Content="Load " Click="buttonLoad_Click" HorizontalAlignment="Left" Margin="10,14,0,0" VerticalAlignment="Top" Width="79" Height="25"/>
-            <Button x:Name="btPrint" Content="Print" Click="btPrint_Click" HorizontalAlignment="Left" Margin="103,14,0,0" VerticalAlignment="Top" Width="75" Height="25"/>
+            <Label Content="Logged in as: " HorizontalAlignment="Left" Margin="10,13,0,0" VerticalAlignment="Top" Width="78"/>
+            <Label x:Name="lblLoggedInAs" Content="..." HorizontalAlignment="Left" Margin="101,13,0,0" VerticalAlignment="Top" Width="164"/>
+            <Button x:Name="button" Content="Load " Click="buttonLoad_Click" HorizontalAlignment="Left" Margin="270,14,0,0" VerticalAlignment="Top" Width="79" Height="25"/>
+            <Button x:Name="btPrint" Content="Print" Click="btPrint_Click" HorizontalAlignment="Left" Margin="423,14,0,0" VerticalAlignment="Top" Width="75" Height="25"/>
             <Button x:Name="btSignOut" Content="Sign out" Click="buttonSignOut_Click" HorizontalAlignment="Left" Margin="519,418,0,0" VerticalAlignment="Top" Width="75" Height="23"/>
             <ListView Name="lvProductList" Opacity="0.9" Margin="10,80,10,38"  >
 
@@ -32,7 +33,7 @@
             </ListView>
             <Label x:Name="label" Content="Search product:" HorizontalAlignment="Left" Margin="64,44,0,0" VerticalAlignment="Top" Width="100"/>
             <TextBox TextChanged="TbFilter_OnTextChanged" x:Name="tbFilter" HorizontalAlignment="Left" Height="23" Margin="169,47,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="283"/>
-            <Button Name="btPreview" Content="PrintPreview" Click="btPreview_Click" HorizontalAlignment="Left" Margin="193,14,0,0" VerticalAlignment="Top" Width="75" Height="25"/>
+            <Button Name="btPreview" Content="Export to PDF" Click="btPreview_Click" HorizontalAlignment="Left" Margin="519,14,0,0" VerticalAlignment="Top" Width="75" Height="25"/>
 
         </Grid>
     </Viewbox>

@@ -42,6 +42,7 @@ namespace MainSIMS
         private void btnViewAllUsers_Click(object sender, RoutedEventArgs e)
         {
             lvUsersList.ItemsSource = db.GetAllUsers();
+            lblLoggedInAs.Content = "Name: " + Globals.currentUser.EmployeeName + "  Role: " + Globals.currentUser.Role; 
         }
 
         private void btnAddUser_Click(object sender, RoutedEventArgs e)

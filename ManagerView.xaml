@@ -5,20 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MainSIMS"
         mc:Ignorable="d"  WindowStartupLocation="CenterScreen"
-        Title="ManagerView" Height="500" Width="573.405">
+        Title="ManagerView" Height="541" Width="573.405">
 
     <Viewbox VerticalAlignment="Top" Stretch="Uniform">
 
-        <Grid Background="Azure" Margin="0,0,0,0" Height="483">
-            <Image x:Name="image" Source="Images/db.jpeg"  HorizontalAlignment="Left" Height="330" VerticalAlignment="Top" Width="538" Margin="42,92,0,0"/>
-
-            <Button x:Name="btLoad" Content="Load " Click="buttonLoad_Click" HorizontalAlignment="Left" Margin="10,14,0,0" VerticalAlignment="Top" Width="75" Height="25"/>
-            <Button x:Name="button1" Content="Print" HorizontalAlignment="Left" Margin="103,14,0,0" VerticalAlignment="Top" Width="75" Height="25"/>
-            <Button x:Name="btnEditSelectedProduct" Click="btnEditSelectedProduct_Click" Content="Edit" HorizontalAlignment="Left" Margin="194,14,0,0" VerticalAlignment="Top" Width="75" Height="25"/>
-            <Button x:Name="btnAddNewProduct" Click="btnAddNewProduct_Click" Content="Add " HorizontalAlignment="Left" Margin="288,14,0,0" VerticalAlignment="Top" Width="75" Height="25"/>
-            <Button x:Name="btnDeleteProduct" Click="btnDeleteProduct_Click" Content="Delete " HorizontalAlignment="Left" Margin="377,14,0,0" VerticalAlignment="Top" Width="75" Height="25"/>
-            <Button x:Name="btnUpdate" Click="buttonLoad_Click" Content="Update" HorizontalAlignment="Left" Margin="467,14,0,0" VerticalAlignment="Top" Width="75" Height="25"/>
-            <ListView Name="lvProductList" SelectionChanged="lvProductList_SelectionChanged" Opacity="0.9" Margin="0,88,10,61"  >
+        <Grid Background="Azure" Margin="0,0,0,0" Height="525" Width="578">
+            <Image x:Name="image" Source="Images/db.jpeg"  HorizontalAlignment="Left" Height="330" VerticalAlignment="Top" Width="538" Margin="10,133,0,0"/>
+            <Label Content="Logged in as: " HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="78"/>
+            <Label x:Name="lblLoggedInAs" Content="..." HorizontalAlignment="Left" Margin="93,10,0,0" VerticalAlignment="Top" Width="164"/>
+            <Button x:Name="btLoad" Content="Load " Click="buttonLoad_Click" HorizontalAlignment="Left" Margin="10,40,0,0" VerticalAlignment="Top" Width="75" Height="25"/>
+            <Button x:Name="button1" Content="Print" HorizontalAlignment="Left" Margin="101,40,0,0" VerticalAlignment="Top" Width="75" Height="25"/>
+            <Button x:Name="btnEditSelectedProduct" Click="btnEditSelectedProduct_Click" Content="Edit" HorizontalAlignment="Left" Margin="196,40,0,0" VerticalAlignment="Top" Width="75" Height="25"/>
+            <Button x:Name="btnAddNewProduct" Click="btnAddNewProduct_Click" Content="Add " HorizontalAlignment="Left" Margin="288,40,0,0" VerticalAlignment="Top" Width="75" Height="25"/>
+            <Button x:Name="btnDeleteProduct" Click="btnDeleteProduct_Click" Content="Delete " HorizontalAlignment="Left" Margin="377,40,0,0" VerticalAlignment="Top" Width="75" Height="25"/>
+            <Button x:Name="btnUpdate" Click="buttonLoad_Click" Content="Update" HorizontalAlignment="Left" Margin="468,40,0,0" VerticalAlignment="Top" Width="75" Height="25"/>
+            <ListView Name="lvProductList" SelectionChanged="lvProductList_SelectionChanged" Opacity="0.9" Margin="10,101,7,48"  >
 
                 <ListView.View>
                     <GridView>
@@ -34,13 +35,11 @@
                     </GridView>
                 </ListView.View>
             </ListView>
-            <Button x:Name="button6" Content="Add to Order" HorizontalAlignment="Left" Margin="10,440,0,0" VerticalAlignment="Top" Width="94" Height="33"/>
-            <Button x:Name="button7" Content="Delete from Order" HorizontalAlignment="Left" Margin="109,440,0,0" VerticalAlignment="Top" Width="121" Height="33"/>
-            <Button x:Name="btSignOut" Content="Sign Out" Click="buttonSignOut_Click" HorizontalAlignment="Left" Margin="467,440,0,0" VerticalAlignment="Top" Width="103" Height="33"/>
-            <Button x:Name="btnViewPO" Content="View PO" Click="btnViewPO_Click" HorizontalAlignment="Left" Margin="235,440,0,0" VerticalAlignment="Top" Width="117" Height="33"/>
-            <Button x:Name="button10" Content="Reports" HorizontalAlignment="Left" Margin="357,440,0,0" VerticalAlignment="Top" Width="105" Height="33"/>
-            <Label x:Name="label" Content="Search product:" HorizontalAlignment="Left" Margin="64,44,0,0" VerticalAlignment="Top" Width="100"/>
-            <TextBox TextChanged="TbFilter_OnTextChanged" x:Name="tbFilter" HorizontalAlignment="Left" Height="23" Margin="169,47,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="283"/>
+            <Button x:Name="btSignOut" Content="Sign Out" Click="buttonSignOut_Click" HorizontalAlignment="Left" Margin="468,483,0,0" VerticalAlignment="Top" Width="103" Height="33"/>
+            <Button x:Name="btnViewPO" Content="View PO" Click="btnViewPO_Click" HorizontalAlignment="Left" Margin="10,482,0,0" VerticalAlignment="Top" Width="117" Height="33"/>
+            <Button x:Name="button10" Content="Reports" HorizontalAlignment="Left" Margin="258,482,0,0" VerticalAlignment="Top" Width="105" Height="33"/>
+            <Label x:Name="label" Content="Search product:" HorizontalAlignment="Left" Margin="50,70,0,0" VerticalAlignment="Top" Width="100"/>
+            <TextBox TextChanged="TbFilter_OnTextChanged" x:Name="tbFilter" HorizontalAlignment="Left" Height="23" Margin="169,70,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="283"/>
 
         </Grid>
     </Viewbox>

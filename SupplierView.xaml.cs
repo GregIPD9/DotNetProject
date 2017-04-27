@@ -35,7 +35,9 @@ namespace InventoryApp
         }
         private void buttonLoad_Click(object sender, RoutedEventArgs e)
         {
-            lvProductList.ItemsSource = db.GetAllProducts();            
+            lvProductList.ItemsSource = db.GetAllProducts();
+            lblLoggedInAs.Content = "Name: " + Globals.currentUser.EmployeeName + "  Role: " + Globals.currentUser.Role; 
+
         }
 
         private void TbFilter_OnTextChanged(object sender, TextChangedEventArgs e)
@@ -61,6 +63,8 @@ namespace InventoryApp
                                                select p;
 
                             lvProductList.ItemsSource = filteredList;
+                            lblLoggedInAs.Content = "Name: " + Globals.currentUser.EmployeeName + "  Role: " + Globals.currentUser.Role; 
+
                  }              
           }
         

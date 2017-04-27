@@ -10,8 +10,8 @@
         <Grid Background="Azure" Margin="0,0,0,0" Height="488">
             <Image x:Name="image" Source="Images/db.jpeg" HorizontalAlignment="Left" Height="322" VerticalAlignment="Top" Width="538" Margin="32,96,0,0"/>
 
-            <Button x:Name="button1" Content="Print All" HorizontalAlignment="Left" Margin="262,8,0,0" VerticalAlignment="Top" Width="96" Height="28"/>
-            <Button x:Name="button2" Content="Print Selected" HorizontalAlignment="Left" Margin="363,8,0,0" VerticalAlignment="Top" Width="89" Height="28"/>
+            <Button x:Name="button1" Content="Print" HorizontalAlignment="Left" Margin="262,8,0,0" VerticalAlignment="Top" Width="96" Height="28"/>
+            <Button x:Name="button2" Content="Export to PDF" HorizontalAlignment="Left" Margin="363,8,0,0" VerticalAlignment="Top" Width="89" Height="28"/>
             <Button x:Name="button3" Content="Modify Selected" HorizontalAlignment="Left" Margin="462,8,0,0" VerticalAlignment="Top" Width="109" Height="28"/>
             <ListView Name="lvProductList" Opacity="0.9" Margin="0,80,10,38" >
                 <ListView.View>
@@ -27,7 +27,6 @@
                     </GridView>
                 </ListView.View>
             </ListView>
-            <Button x:Name="button10" Content="Request" HorizontalAlignment="Left" Margin="217,452,0,0" VerticalAlignment="Top" Width="105" Height="33"/>
             <Label x:Name="label" Content="Search product:" HorizontalAlignment="Left" Margin="10,44,0,0" VerticalAlignment="Top" Width="100"/>
             <TextBox TextChanged="TbFilter_OnTextChanged" x:Name="tbFilter" HorizontalAlignment="Left" Height="23" Margin="110,47,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="283"/>
             <Label Content="Logged in as: " HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="78"/>
