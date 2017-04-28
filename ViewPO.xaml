@@ -31,8 +31,8 @@
             <Button x:Name="btnAddToOrder" Click="btnAddToOrder_Click" Content="Add" HorizontalAlignment="Left" Margin="365,152,0,0" VerticalAlignment="Top" Width="43" Height="25" RenderTransformOrigin="0.744,-1.456"/>
             <Label x:Name="label1" Content="SEARCH:" HorizontalAlignment="Left" Margin="10,16,0,0" VerticalAlignment="Top"/>
             <TextBox TextChanged="TbFilter_OnTextChanged" x:Name="tbFilter" HorizontalAlignment="Left" Height="23" Margin="64,18,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="202"/>
-            <Button x:Name="btnEditProductInPO" Content="Edit" HorizontalAlignment="Left" Margin="539,21,0,0" VerticalAlignment="Top" Width="70" Height="21"/>
-            <Button x:Name="btnDeleteFromPO" Content="Delete" HorizontalAlignment="Left" Margin="614,21,0,0" VerticalAlignment="Top" Width="70" Height="21"/>
+            <Button x:Name="btnEditProductInPO" Click="btnEditProductInPO_Click" Content="Edit Quantity:" HorizontalAlignment="Left" Margin="416,18,0,0" VerticalAlignment="Top" Width="88" Height="21"/>
+            <Button x:Name="btnDeleteFromPO" Click="btnDeleteFromPO_Click" Content="Delete selected" HorizontalAlignment="Left" Margin="661,18,0,0" VerticalAlignment="Top" Width="94" Height="21"/>
             <ListView x:Name="lvNewOrderList" HorizontalAlignment="Left" Height="243" Margin="416,51,0,0" VerticalAlignment="Top" Width="350">
                 <ListView.View>
                     <GridView>
@@ -40,7 +40,7 @@
                         <GridViewColumn Header="SCU" Width="60" DisplayMemberBinding="{Binding SCU}" />
                         <GridViewColumn Header="Product Name" Width="100" DisplayMemberBinding="{Binding ProductName}" />
                         <GridViewColumn Header="Price" Width="40" DisplayMemberBinding="{Binding Price}" />
-                        <GridViewColumn Header="Quantity" Width="60" DisplayMemberBinding="{Binding Quantity}" />      
+                        <GridViewColumn Header="Quantity" Width="60" DisplayMemberBinding="{Binding Quantity}" />
                     </GridView>
                 </ListView.View>
             </ListView>

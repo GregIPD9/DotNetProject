@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
@@ -12,10 +13,10 @@ namespace MainSIMS
     {
         Database db;
         int selectedProductIndex;
+        int selectedOrderProductIndex;
         List<Product> newOrder = new List<Product>();
         List<Product> list = new List<Product>();
-
-
+      
         public ViewPO()   
         {
             db = new Database();
@@ -60,9 +61,28 @@ namespace MainSIMS
                 priceQty+=p.Price*p.Quantity;
             }
             tbTotalCost.Text = priceQty.ToString("0.##");
-        }      
-       
-        
+        }
+
+        private void btnEditProductInPO_Click(object sender, RoutedEventArgs e)
+        {
+            OrderPOModifyQuantity ord = new OrderPOModifyQuantity();
+            Product p = (Product)lvNewOrderList.Items.GetItemAt(selectedOrderProductIndex);
+            ord.lblProductId.Content = p.ProductId;
+            ord.lblProductName.Content = p.ProductName;
+            ord.tbQuantityToOrder.Text = p.Quantity.ToString();
+            ord.ShowDialog();
+            lvNewOrderList.Items.Refresh();
+        }
+
+        private void btnDeleteFromPO_Click(object sender, RoutedEventArgs e)
+        {
+            selectedOrderProductIndex = lvNewOrderList.SelectedIndex;
+            newOrder.Remove(newOrder.ElementAt(selectedOrderProductIndex));
+            lvNewOrderList.Items.Refresh();
+                  
+        }
+
 
     }
 }
+  

@@ -96,6 +96,9 @@
     <Compile Include="Order.cs">
       <DependentUpon>ModelAllTablesWithForeignKeys.tt</DependentUpon>
     </Compile>
+    <Compile Include="OrderPOModifyQuantity.xaml.cs">
+      <DependentUpon>OrderPOModifyQuantity.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Product.cs">
       <DependentUpon>ModelAllTablesWithForeignKeys.tt</DependentUpon>
     </Compile>
@@ -167,6 +170,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ModifyUser.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="OrderPOModifyQuantity.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
