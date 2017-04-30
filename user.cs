@@ -61,17 +61,13 @@ namespace MainSIMS
                     con.Open();
                     cmd.ExecuteNonQuery();
                 }
-
                 catch (Exception)
                 {
                     MessageBox.Show("Using Stored Procedure doesn't work! Ha Ha Ha!", "Message", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
 
-                finally
-                {
                     cmd.Dispose();
                     con.Close();
-                }
             }
         }
     }
