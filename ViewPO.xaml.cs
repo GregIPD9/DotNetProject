@@ -82,6 +82,16 @@ namespace MainSIMS
                   
         }
 
+        private void btPrint_Click(object sender, RoutedEventArgs e)
+        {
+            PrintDialog printDialog = new PrintDialog();
+
+            if (printDialog.ShowDialog() == true)
+            {
+                printDialog.PrintVisual(lvNewOrderList, "Print List");
+            }
+        }
+
 
     }
 }

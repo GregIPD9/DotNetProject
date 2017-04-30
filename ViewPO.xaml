@@ -26,8 +26,8 @@
             <Label x:Name="label" Content="Total, $:" HorizontalAlignment="Left" Margin="256,303,0,0" VerticalAlignment="Top"/>
             <TextBox x:Name="tbTotalCost" HorizontalAlignment="Left" Height="23" Margin="312,303,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
             <Button x:Name="button" Content="Place Order" HorizontalAlignment="Left" Margin="312,331,0,0" VerticalAlignment="Top" Width="120" Height="23" RenderTransformOrigin="1.176,0.867"/>
-            <Button x:Name="button1" Content="Export to PDF" HorizontalAlignment="Left" Margin="598,332,0,0" VerticalAlignment="Top" Width="86" Height="20"/>
-            <Button x:Name="button2" Content="Print Order" HorizontalAlignment="Left" Margin="112,333,0,0" VerticalAlignment="Top" Width="86" Height="21"/>
+            <Button x:Name="btEportToPdf" Content="Export to PDF" Click="btEportToPdf_Click" HorizontalAlignment="Left" Margin="598,332,0,0" VerticalAlignment="Top" Width="86" Height="20"/>
+            <Button x:Name="btPrint" Content="Print Order" Click="btPrint_Click" HorizontalAlignment="Left" Margin="112,333,0,0" VerticalAlignment="Top" Width="86" Height="21"/>
             <Button x:Name="btnAddToOrder" Click="btnAddToOrder_Click" Content="Add" HorizontalAlignment="Left" Margin="365,152,0,0" VerticalAlignment="Top" Width="43" Height="25" RenderTransformOrigin="0.744,-1.456"/>
             <Label x:Name="label1" Content="SEARCH:" HorizontalAlignment="Left" Margin="10,16,0,0" VerticalAlignment="Top"/>
             <TextBox TextChanged="TbFilter_OnTextChanged" x:Name="tbFilter" HorizontalAlignment="Left" Height="23" Margin="64,18,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="202"/>
