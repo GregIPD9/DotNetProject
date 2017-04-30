@@ -71,8 +71,15 @@ namespace InventoryApp
 
         private void buttonSignOut_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("You have been successfully signed out.", "Message", MessageBoxButton.OK, MessageBoxImage.Information);
             this.Close();
+        }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            Globals.currentUser.EmployeeName = null;
+            Globals.currentUser.Role = null;
+            Globals.currentUser.Password = null;
+            MessageBox.Show("You have been successfully signed out.", "Message", MessageBoxButton.OK, MessageBoxImage.Information);
         }
 
         private void btPrint_Click(object sender, RoutedEventArgs e)
@@ -83,11 +90,6 @@ namespace InventoryApp
             {
                printDialog.PrintVisual(lvProductList, "Print List");
             }
-        }
-
-        private void btPreview_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }
